@@ -773,7 +773,7 @@
 
           <!-- Action Links -->
           <div class="social-links">
-            <a href="mailto:m.roostaee@umz.ac.ir" class="btn-link btn-primary"><i class="fas fa-envelope"></i> Email</a>
+            <a href="#" id="email-hero-btn" class="btn-link btn-primary"><i class="fas fa-envelope"></i> Email</a>
             <a href="https://scholar.google.com/citations?hl=en&user=ukzXH7IAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="btn-link"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
             <a href="https://orcid.org/0000-0003-0999-7647" target="_blank" class="btn-link"><i class="fab fa-orcid"></i> ORCID</a>
             <a href="https://www.researchgate.net/profile/Meysam-Roostaee" target="_blank" class="btn-link"><i class="fab fa-researchgate"></i> ResearchGate</a>
@@ -1465,7 +1465,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S095741742030542X}
         I welcome discussions regarding academic collaborations, prospective student research, and industry AI partnerships:
       </p>
       <div style="margin-top: 1rem; font-size: 0.95rem;">
-        <p><i class="fas fa-envelope" style="width: 22px; color: var(--accent);"></i> <strong>Email:</strong> <a href="mailto:m.roostaee@umz.ac.ir">m.roostaee@umz.ac.ir</a></p>
+        <p><i class="fas fa-envelope" style="width: 22px; color: var(--accent);"></i> <strong>Email:</strong> <a href="#" id="email-contact-link">Loading email...</a></p>
         <p><i class="fas fa-map-marker-alt" style="width: 22px; color: var(--accent);"></i> <strong>Office:</strong> Faculty of Engineering and Technology, University of Mazandaran, Babolsar, Iran</p>
       </div>
     </section>
@@ -1507,5 +1507,22 @@ url = {https://www.sciencedirect.com/science/article/pii/S095741742030542X}
       });
     }
   </script>
+  // Anti-Spam Email Protection
+    document.addEventListener("DOMContentLoaded", function() {
+      const user = "m.roostaee";
+      const host = "umz.ac.ir";
+      const fullEmail = user + "@" + host;
+
+      const heroBtn = document.getElementById("email-hero-btn");
+      if (heroBtn) {
+        heroBtn.href = "mailto:" + fullEmail;
+      }
+
+      const contactLink = document.getElementById("email-contact-link");
+      if (contactLink) {
+        contactLink.href = "mailto:" + fullEmail;
+        contactLink.textContent = fullEmail;
+      }
+    });
 </body>
 </html>
