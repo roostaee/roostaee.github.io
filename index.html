@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Meysam Roostaee | Assistant Professor of Computer Engineering</title>
-  <meta name="description" content="Personal academic website of Dr. Meysam Roostaee. Research in Artificial Intelligence, Natural Language Processing, Stream Mining, and Healthcare Informatics.">
+  <meta name="description" content="Personal academic website of Dr. Meysam Roostaee. Research in LLMs, Trustworthy AI, Concept Drift, Healthcare Informatics, and Software Intelligence.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
   <style>
@@ -21,6 +21,8 @@
       --border-color: #e2e8f0;
       --tag-bg: #eff6ff;
       --tag-color: #1d4ed8;
+      --highlight: #f0fdf4;
+      --highlight-border: #bbf7d0;
     }
 
     * {
@@ -47,7 +49,7 @@
     }
 
     .container {
-      max-width: 1080px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
@@ -56,7 +58,7 @@
     header {
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border-color);
       z-index: 1000;
@@ -77,14 +79,14 @@
 
     .nav-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.4rem;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--text-dark);
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
 
     .nav-links a:hover {
@@ -93,47 +95,50 @@
 
     /* Hero Section */
     .hero {
-      padding: 4.5rem 0 3rem;
+      padding: 4rem 0 3rem;
       background: white;
       border-bottom: 1px solid var(--border-color);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 240px 1fr;
+      grid-template-columns: 220px 1fr;
       gap: 3rem;
       align-items: center;
     }
 
     .hero-photo img {
-      width: 220px;
-      height: 220px;
+      width: 210px;
+      height: 210px;
+      aspect-ratio: 1 / 1;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      object-position: center 15%;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12);
       border: 4px solid white;
       outline: 1px solid var(--border-color);
     }
 
     .hero-title {
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       color: var(--text-dark);
       margin-bottom: 0.25rem;
       font-weight: 800;
+      letter-spacing: -0.02em;
     }
 
     .hero-subtitle {
       font-size: 1.15rem;
       color: var(--text-muted);
-      margin-bottom: 1rem;
+      margin-bottom: 1.1rem;
       font-weight: 500;
     }
 
-    .hero-tagline {
-      font-size: 1.05rem;
+    .hero-bio {
+      font-size: 1.02rem;
       color: var(--text-main);
-      margin-bottom: 1.5rem;
-      max-width: 680px;
+      margin-bottom: 1.4rem;
+      line-height: 1.7;
     }
 
     .hero-badges {
@@ -147,9 +152,9 @@
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      padding: 0.3rem 0.75rem;
+      padding: 0.35rem 0.8rem;
       border-radius: 9999px;
       background: var(--tag-bg);
       color: var(--tag-color);
@@ -158,19 +163,20 @@
     .social-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 0.65rem;
     }
 
     .btn-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.45rem;
       font-size: 0.88rem;
-      padding: 0.45rem 0.9rem;
+      padding: 0.45rem 0.95rem;
       border-radius: 6px;
       background: #f1f5f9;
       color: var(--text-dark);
       font-weight: 500;
+      border: 1px solid var(--border-color);
     }
 
     .btn-link:hover {
@@ -178,7 +184,7 @@
       color: var(--accent);
     }
 
-    /* Section Global */
+    /* Sections */
     section {
       padding: 3.5rem 0;
     }
@@ -195,10 +201,10 @@
       padding-bottom: 0.5rem;
     }
 
-    /* Flagship / Selected Research Cards */
+    /* Featured Cards */
     .featured-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
       gap: 1.5rem;
       margin-top: 1rem;
     }
@@ -207,7 +213,7 @@
       background: white;
       border-radius: 8px;
       border: 1px solid var(--border-color);
-      padding: 1.5rem;
+      padding: 1.6rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -230,7 +236,7 @@
     }
 
     .featured-title {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-dark);
       margin-bottom: 0.6rem;
@@ -238,12 +244,12 @@
     }
 
     .featured-desc {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: var(--text-main);
       margin-bottom: 1.2rem;
     }
 
-    /* Publications List */
+    /* Filter Buttons */
     .filter-buttons {
       display: flex;
       flex-wrap: wrap;
@@ -254,7 +260,7 @@
     .filter-btn {
       background: white;
       border: 1px solid var(--border-color);
-      padding: 0.4rem 0.85rem;
+      padding: 0.4rem 0.9rem;
       border-radius: 20px;
       font-size: 0.82rem;
       cursor: pointer;
@@ -269,25 +275,32 @@
       border-color: var(--accent);
     }
 
+    /* Publication Card */
     .pub-card {
       background: white;
       border-radius: 8px;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 1rem;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 1.25rem;
       border: 1px solid var(--border-color);
+      transition: box-shadow 0.2s;
+    }
+
+    .pub-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     }
 
     .pub-title {
-      font-size: 1.05rem;
-      font-weight: 600;
+      font-size: 1.1rem;
+      font-weight: 700;
       color: var(--text-dark);
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.35rem;
+      line-height: 1.4;
     }
 
     .pub-authors {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: var(--text-main);
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.25rem;
     }
 
     .pub-authors strong {
@@ -295,7 +308,7 @@
     }
 
     .pub-venue {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
       font-style: italic;
       margin-bottom: 0.8rem;
@@ -305,26 +318,76 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-top: 0.5rem;
+      margin-top: 0.6rem;
     }
 
     .action-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.3rem;
-      padding: 0.25rem 0.65rem;
-      font-size: 0.78rem;
+      gap: 0.35rem;
+      padding: 0.3rem 0.75rem;
+      font-size: 0.8rem;
       font-weight: 600;
       border-radius: 4px;
       border: 1px solid var(--border-color);
       background: #f8fafc;
       color: var(--text-main);
       cursor: pointer;
+      transition: all 0.2s;
     }
 
     .action-btn:hover {
       background: #e2e8f0;
       color: var(--accent);
+    }
+
+    /* Abstract & Architecture Drawer */
+    .pub-details {
+      display: none;
+      margin-top: 1rem;
+      padding: 1.2rem;
+      background: #f8fafc;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    .keyword-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .keyword-pill {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      background: #e2e8f0;
+      color: #334155;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .pub-figure-container {
+      margin-top: 0.8rem;
+      border: 1px solid var(--border-color);
+      background: white;
+      border-radius: 6px;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    .pub-figure-container img {
+      max-width: 100%;
+      height: auto;
+      max-height: 280px;
+      border-radius: 4px;
+    }
+
+    .pub-figure-caption {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
     }
 
     .bibtex-box {
@@ -340,41 +403,82 @@
       overflow-x: auto;
     }
 
-    /* Projects Section */
+    /* Project Cards */
     .project-card {
       background: white;
       border-left: 4px solid var(--accent);
       border-radius: 0 8px 8px 0;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 1rem;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 1.25rem;
       border-top: 1px solid var(--border-color);
       border-right: 1px solid var(--border-color);
       border-bottom: 1px solid var(--border-color);
     }
 
     .project-title {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-dark);
       margin-bottom: 0.3rem;
     }
 
     .project-meta {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
-    /* Students / Lab Section */
+    /* Teaching Section */
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .teaching-card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .teaching-level {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .course-list {
+      list-style: none;
+    }
+
+    .course-list li {
+      padding: 0.45rem 0;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 0.92rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .course-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* Students Section */
     .students-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 1rem;
     }
 
     .student-item {
       background: white;
-      padding: 1rem 1.2rem;
+      padding: 1rem 1.25rem;
       border-radius: 6px;
       border: 1px solid var(--border-color);
     }
@@ -401,7 +505,6 @@
       color: var(--text-muted);
     }
 
-    /* Mobile Responsive */
     @media (max-width: 768px) {
       .hero-grid {
         grid-template-columns: 1fr;
@@ -415,7 +518,7 @@
         justify-content: center;
       }
       .nav-links {
-        display: none; /* Can add hamburger menu if needed */
+        display: none;
       }
     }
   </style>
@@ -429,10 +532,11 @@
         <div class="nav-brand">Meysam Roostaee, Ph.D.</div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#featured">Highlights</a></li>
+          <li><a href="#highlights">Highlights</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#publications">Publications</a></li>
-          <li><a href="#supervision">Students</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#students">Students</a></li>
           <li><a href="#service">Service</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -445,30 +549,37 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-photo">
-          <!-- Put your photo named profile.jpg in the same folder -->
-          <img src="profile.jpg" alt="Dr. Meysam Roostaee" onerror="this.src='https://via.placeholder.com/220?text=Dr.+Roostaee'">
+          <img src="profile.jpg" alt="Dr. Meysam Roostaee" onerror="this.src='https://via.placeholder.com/210?text=Dr.+Roostaee'">
         </div>
         <div class="hero-content">
           <h1 class="hero-title">Meysam Roostaee, Ph.D.</h1>
           <div class="hero-subtitle">Assistant Professor of Computer Engineering &bull; University of Mazandaran</div>
-          <p class="hero-tagline">
-            Bridging machine learning foundations, natural language processing, and real-time data stream analytics to build robust, trustworthy intelligent systems for clinical, linguistic, and environmental applications.
-          </p>
+          
+          <div class="hero-bio">
+            <p>
+              I am an Assistant Professor of Computer Engineering at the University of Mazandaran. My research focuses on <strong>Trustworthy Artificial Intelligence, Large Language Models (LLMs), and Continual Stream Learning</strong>, dedicated to building adaptive intelligence that remains reliable beyond static benchmark datasets.
+            </p>
+            <p style="margin-top: 0.6rem;">
+              Our group explores intelligence across rich, non-conventional modalities: from <strong>medical reports and chest X-rays</strong> in clinical health informatics, to <strong>source code repositories and changelogs</strong> in software intelligence, to <strong>real-time hydrological telemetry</strong> for environmental decision-making.
+            </p>
+          </div>
 
           <div class="hero-badges">
-            <span class="badge"><i class="fas fa-brain"></i> Artificial Intelligence</span>
-            <span class="badge"><i class="fas fa-language"></i> Natural Language Processing</span>
+            <span class="badge"><i class="fas fa-brain"></i> Trustworthy AI & LLMs</span>
             <span class="badge"><i class="fas fa-stream"></i> Concept Drift & Stream Mining</span>
+            <span class="badge"><i class="fas fa-laptop-code"></i> Software & Code Intelligence</span>
             <span class="badge"><i class="fas fa-heartbeat"></i> Health Informatics</span>
+            <span class="badge"><i class="fas fa-share-alt"></i> Social Network Analysis</span>
+            <span class="badge"><i class="fas fa-water"></i> Environmental AI</span>
           </div>
 
           <div class="social-links">
             <a href="mailto:m.roostaee@umz.ac.ir" class="btn-link"><i class="fas fa-envelope"></i> Email</a>
-            <a href="https://scholar.google.com" target="_blank" class="btn-link"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-            <a href="https://orcid.org" target="_blank" class="btn-link"><i class="fab fa-orcid"></i> ORCID</a>
-            <a href="https://researchgate.net" target="_blank" class="btn-link"><i class="fab fa-researchgate"></i> ResearchGate</a>
-            <a href="https://github.com" target="_blank" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://scholar.google.com/citations?hl=en&user=ukzXH7IAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="btn-link"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+            <a href="https://orcid.org/0000-0003-0999-7647" target="_blank" class="btn-link"><i class="fab fa-orcid"></i> ORCID</a>
+            <a href="https://www.researchgate.net/profile/Meysam-Roostaee" target="_blank" class="btn-link"><i class="fab fa-researchgate"></i> ResearchGate</a>
             <a href="https://rms.umz.ac.ir/~mroostaee" target="_blank" class="btn-link"><i class="fas fa-university"></i> University Profile</a>
+            <a href="https://github.com" target="_blank" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
           </div>
         </div>
       </div>
@@ -477,8 +588,8 @@
 
   <main class="container">
 
-    <!-- Flagship Research Highlights (Sabokrou Style) -->
-    <section id="featured">
+    <!-- Featured Research Highlights -->
+    <section id="highlights">
       <h2 class="section-title"><i class="fas fa-star" style="color:#eab308;"></i> Featured Research Highlights</h2>
       <div class="featured-grid">
         
@@ -487,11 +598,11 @@
             <div class="featured-tag">Stream Mining & Drift Detection</div>
             <h3 class="featured-title">ReDiST: Lightweight Unsupervised Drift Detection</h3>
             <p class="featured-desc">
-              A novel residual analysis framework enabling fast and highly accurate unsupervised drift detection in intelligent systems handling high-speed data streams.
+              A novel residual analysis framework enabling fast, accurate, unsupervised drift detection in intelligent systems handling high-speed data streams without label feedback.
             </p>
           </div>
           <div>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">Knowledge-Based Systems (Elsevier, 2025)</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Knowledge-Based Systems (Elsevier, 2025)</span>
             <div class="pub-actions">
               <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
               <a href="#" class="action-btn"><i class="fab fa-github"></i> Code</a>
@@ -504,11 +615,11 @@
             <div class="featured-tag">Software Engineering & NLP</div>
             <h3 class="featured-title">CONKER: Contrastive Knowledge for Bug Classification</h3>
             <p class="featured-desc">
-              Leveraging contrastive knowledge-enhanced retrieval to accurately categorize user app reviews into actionable software bug reports.
+              Harnesses contrastive knowledge-enhanced representation retrieval to accurately categorize user reviews into actionable software bug reports.
             </p>
           </div>
           <div>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">Information and Software Technology (Elsevier, 2026)</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Information & Software Technology (Elsevier, 2026)</span>
             <div class="pub-actions">
               <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
               <a href="#" class="action-btn"><i class="fab fa-github"></i> Code</a>
@@ -519,13 +630,13 @@
         <div class="featured-card">
           <div>
             <div class="featured-tag">Cross-Lingual Information Retrieval</div>
-            <h3 class="featured-title">Cross-Language Plagiarism Detection Framework</h3>
+            <h3 class="featured-title">Cross-Language Plagiarism Alignment Framework</h3>
             <p class="featured-desc">
-              A two-level matching and candidate retrieval scheme for aligning cross-language text and discovering non-trivial semantic reuse across language barriers.
+              A two-level semantic matching and candidate retrieval scheme for detecting sophisticated semantic reuse across multilingual collections.
             </p>
           </div>
           <div>
-            <span style="font-size: 0.8rem; color: var(--text-muted);">Information Processing & Management / ESWA (Elsevier)</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Information Processing & Management / ESWA</span>
             <div class="pub-actions">
               <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
               <a href="#" class="action-btn"><i class="fas fa-database"></i> Dataset</a>
@@ -536,23 +647,23 @@
       </div>
     </section>
 
-    <!-- Research Projects (Including Industry/Applied) -->
+    <!-- Research & Applied Projects -->
     <section id="projects">
       <h2 class="section-title"><i class="fas fa-project-diagram"></i> Research & Applied Projects</h2>
       
       <div class="project-card">
-        <h3 class="project-title">Development of a Runoff Estimation System Using Advanced AI Techniques</h3>
-        <div class="project-meta"><strong>Principal Investigator / Lead</strong> &bull; Client: <em>Mazandaran Regional Water Company, Iran</em> &bull; Applied Hydrology & AI</div>
+        <h3 class="project-title">Development of a Runoff Estimation System Using Advanced Artificial Intelligence Techniques</h3>
+        <div class="project-meta"><strong>Project Lead / Principal Investigator</strong> &bull; Client: <em>Mazandaran Regional Water Company, Iran</em> &bull; Applied Hydrology & AI</div>
         <p style="font-size: 0.92rem;">
-          Designing and deploying predictive deep learning models for accurate surface runoff forecasting and river basin management, integrating environmental hydrological telemetry with machine learning for water resource decisions.
+          Designing and deploying predictive deep learning models for accurate surface runoff estimation and river basin management. The system integrates real-time hydrological telemetry with advanced machine learning architectures to optimize regional water resource planning and flood prevention.
         </p>
       </div>
 
       <div class="project-card">
-        <h3 class="project-title">Unsupervised Concept Drift Detection in High-Speed Data Streams</h3>
+        <h3 class="project-title">Unsupervised Concept Drift Detection in High-Speed Data Streams Using Residual Distribution Analysis</h3>
         <div class="project-meta"><strong>Principal Investigator</strong> &bull; University of Mazandaran &bull; 2025</div>
         <p style="font-size: 0.92rem;">
-          Investigating residual distribution analysis techniques to detect sudden and gradual distribution shifts in real-time streaming environments without relying on ground-truth label feedback.
+          Investigating robust statistical residual estimation techniques to proactively identify abrupt and gradual distribution shifts in real-time streaming environments, eliminating the dependency on ground-truth label feedback.
         </p>
       </div>
     </section>
@@ -561,7 +672,6 @@
     <section id="publications">
       <h2 class="section-title"><i class="fas fa-book-open"></i> Publications</h2>
 
-      <!-- Filter Controls -->
       <div class="filter-buttons">
         <button class="filter-btn active" onclick="filterPubs('all')">All</button>
         <button class="filter-btn" onclick="filterPubs('nlp')">NLP & LLMs</button>
@@ -578,9 +688,27 @@
           <div class="pub-authors">Z. Davoudi, <strong>M. Roostaee*</strong>, K. Aghajani</div>
           <div class="pub-venue">Informatics in Medicine Unlocked, vol. 64, 101781, 2026. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper (DOI)</a>
+            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <button class="action-btn" onclick="toggleDetails('det1')"><i class="fas fa-info-circle"></i> Abstract & Architecture</button>
             <button class="action-btn" onclick="toggleBib('bib1')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
+          
+          <div id="det1" class="pub-details">
+            <div class="keyword-list">
+              <span class="keyword-pill">Generative AI</span>
+              <span class="keyword-pill">Depression Detection</span>
+              <span class="keyword-pill">Knowledge-Augmented Reasoning</span>
+              <span class="keyword-pill">Information Fusion</span>
+              <span class="keyword-pill">Mental Health</span>
+            </div>
+            <p><strong>Abstract:</strong> This paper introduces an information-fusion framework combining ensemble learning with knowledge-augmented reasoning to detect depressive symptoms in user-generated text. By integrating generative AI priors with clinical psychiatric knowledge bases, the model captures nuanced linguistic and emotional signals, significantly outperforming conventional baselines.</p>
+            <div class="pub-figure-container">
+              <!-- Put your figure in images/papers/depression-fusion.png -->
+              <img src="images/papers/depression-fusion.png" alt="Framework Architecture" onerror="this.parentElement.style.display='none'">
+              <div class="pub-figure-caption">Figure: Overview of knowledge-augmented information fusion architecture.</div>
+            </div>
+          </div>
+
           <div id="bib1" class="bibtex-box">@article{davoudi2026ensembles,
   title={From ensembles to knowledge-augmented reasoning: Information fusion for depression detection in the generative AI era},
   author={Davoudi, Z. and Roostaee, Meysam and Aghajani, K.},
@@ -598,9 +726,26 @@
           <div class="pub-authors"><strong>M. Roostaee*</strong>, M. H. Soheilian</div>
           <div class="pub-venue">Computing, 108(7), 100, 2026. [Springer]</div>
           <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper (DOI)</a>
+            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <button class="action-btn" onclick="toggleDetails('det2')"><i class="fas fa-info-circle"></i> Abstract & Architecture</button>
             <button class="action-btn" onclick="toggleBib('bib2')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
+
+          <div id="det2" class="pub-details">
+            <div class="keyword-list">
+              <span class="keyword-pill">Concept Drift</span>
+              <span class="keyword-pill">Anchor Drift</span>
+              <span class="keyword-pill">Data Streams</span>
+              <span class="keyword-pill">Abrupt Drifts</span>
+              <span class="keyword-pill">Adaptive Learning</span>
+            </div>
+            <p><strong>Abstract:</strong> Detecting sudden distributional shifts in high-throughput streaming environments is vital for autonomous AI. We propose Concept Anchor Drift Detection (CADD), establishing dynamic reference anchors to proactively register abrupt drifts with minimal false alarms and low latency.</p>
+            <div class="pub-figure-container">
+              <img src="images/papers/cadd-arch.png" alt="CADD Architecture" onerror="this.parentElement.style.display='none'">
+              <div class="pub-figure-caption">Figure: Concept anchor tracking workflow across dynamic stream windows.</div>
+            </div>
+          </div>
+
           <div id="bib2" class="bibtex-box">@article{roostaee2026concept,
   title={Concept anchor drift detection: a framework for proactive detection of abrupt drifts in real-world data streams},
   author={Roostaee, Meysam and Soheilian, M. H.},
@@ -620,8 +765,20 @@
           <div class="pub-venue">Iranian Journal of Science and Technology, Transactions of Electrical Engineering, 2026. [Springer]</div>
           <div class="pub-actions">
             <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <button class="action-btn" onclick="toggleDetails('det3')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib3')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
+
+          <div id="det3" class="pub-details">
+            <div class="keyword-list">
+              <span class="keyword-pill">Large Language Models</span>
+              <span class="keyword-pill">Cold-Start Problem</span>
+              <span class="keyword-pill">Synthetic Data Generation</span>
+              <span class="keyword-pill">Feedback Systems</span>
+            </div>
+            <p><strong>Abstract:</strong> Cold-start scenarios in recommendation and feedback platforms suffer from extreme sparsity. This research investigates prompt-steered LLM synthesis to generate realistic, domain-grounded synthetic user reviews that bootstrap downstream recommender systems without injecting distributional bias.</p>
+          </div>
+
           <div id="bib3" class="bibtex-box">@article{roostaee2026zero,
   title={Zero to Feedback: Leveraging Large Language Models for Augmented Review Generation in Cold-Start Scenarios},
   author={Roostaee, Meysam},
@@ -638,8 +795,21 @@
           <div class="pub-venue">Alexandria Engineering Journal, vol. 137, pp. 505-520, 2026. [Elsevier]</div>
           <div class="pub-actions">
             <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <button class="action-btn" onclick="toggleDetails('det4')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib4')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
+
+          <div id="det4" class="pub-details">
+            <div class="keyword-list">
+              <span class="keyword-pill">Clinical NLP</span>
+              <span class="keyword-pill">Chest X-Ray Reports</span>
+              <span class="keyword-pill">Zero-Shot Classification</span>
+              <span class="keyword-pill">Prompt Engineering</span>
+              <span class="keyword-pill">LLMs</span>
+            </div>
+            <p><strong>Abstract:</strong> Addressing the annotation bottleneck in medical imaging, this work demonstrates how targeted prompt engineering on radiologist text reports enables accurate zero-shot disease categorization, matching supervised performance without task-specific retraining.</p>
+          </div>
+
           <div id="bib4" class="bibtex-box">@article{katal2026beyond,
   title={Beyond pixels: Zero-shot classification of chest X-ray reports via prompt engineering and LLMs},
   author={Katal, H. and Ghasemi, J. and Roostaee, Meysam},
@@ -658,8 +828,20 @@
           <div class="pub-venue">Information and Software Technology, 108056, 2026. [Elsevier]</div>
           <div class="pub-actions">
             <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <button class="action-btn" onclick="toggleDetails('det5')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib5')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
+
+          <div id="det5" class="pub-details">
+            <div class="keyword-list">
+              <span class="keyword-pill">Software Repository Mining</span>
+              <span class="keyword-pill">Bug Classification</span>
+              <span class="keyword-pill">Contrastive Learning</span>
+              <span class="keyword-pill">Knowledge Retrieval</span>
+            </div>
+            <p><strong>Abstract:</strong> Mobile application reviews contain crucial bug reports alongside unstructured noise. CONKER integrates contrastive representations and domain knowledge to retrieve and classify bug-related feedback with high precision for software maintenance teams.</p>
+          </div>
+
           <div id="bib5" class="bibtex-box">@article{roostaee2026conker,
   title={CONKER: CONtrastive knowledge enhanced retrieval for app review bug classification},
   author={Roostaee, Meysam and Fakhrahmad, S. M. and Sadreddini, M. H.},
@@ -677,8 +859,20 @@
           <div class="pub-venue">Knowledge-Based Systems, 115247, 2025. [Elsevier]</div>
           <div class="pub-actions">
             <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <button class="action-btn" onclick="toggleDetails('det6')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib6')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
+
+          <div id="det6" class="pub-details">
+            <div class="keyword-list">
+              <span class="keyword-pill">Residual Analysis</span>
+              <span class="keyword-pill">Unsupervised Drift Detection</span>
+              <span class="keyword-pill">Intelligent Systems</span>
+              <span class="keyword-pill">Streaming Data</span>
+            </div>
+            <p><strong>Abstract:</strong> Most concept drift detectors rely on timely label availability—an unrealistic assumption in real deployments. ReDiST leverages lightweight residual monitoring across statistical projections to detect drifts completely unsupervised with exceptional computational efficiency.</p>
+          </div>
+
           <div id="bib6" class="bibtex-box">@article{roostaee2025redist,
   title={ReDiST: A Lightweight Residual Analysis Framework for Fast and Accurate Unsupervised Drift Detection in Intelligent Systems},
   author={Roostaee, Meysam and Soheilian, M. H.},
@@ -690,75 +884,15 @@
         </div>
 
         <!-- Pub 7 -->
-        <div class="pub-card" data-category="nlp">
-          <div class="pub-title">Synergistic Content Understanding: Misinformation Detection through Contrastive Regularization and Embedding-Space Mixup</div>
-          <div class="pub-authors">M. Padashi, <strong>M. Roostaee*</strong>, H. Zeynali, A. Jafari</div>
-          <div class="pub-venue">Contributions of Science and Technology for Engineering, 2(4), 59-68, 2025.</div>
-          <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-            <button class="action-btn" onclick="toggleBib('bib7')"><i class="fas fa-quote-right"></i> BibTeX</button>
-          </div>
-          <div id="bib7" class="bibtex-box">@article{padashi2025synergistic,
-  title={Synergistic Content Understanding: Misinformation Detection through Contrastive Regularization and Embedding-Space Mixup},
-  author={Padashi, M. and Roostaee, Meysam and Zeynali, H. and Jafari, A.},
-  journal={Contributions of Science and Technology for Engineering},
-  volume={2},
-  number={4},
-  pages={59--68},
-  year={2025}
-}</div>
-        </div>
-
-        <!-- Pub 8 -->
-        <div class="pub-card" data-category="ir">
-          <div class="pub-title">Language-independent Profile-based Tag Recommendation for Community Question Answering Systems</div>
-          <div class="pub-authors"><strong>M. Roostaee*</strong></div>
-          <div class="pub-venue">International Journal of Engineering, 37(12), 2547-2559, 2024.</div>
-          <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-            <button class="action-btn" onclick="toggleBib('bib8')"><i class="fas fa-quote-right"></i> BibTeX</button>
-          </div>
-          <div id="bib8" class="bibtex-box">@article{roostaee2024language,
-  title={Language-independent Profile-based Tag Recommendation for Community Question Answering Systems},
-  author={Roostaee, Meysam},
-  journal={International Journal of Engineering},
-  volume={37},
-  number={12},
-  pages={2547--2559},
-  year={2024}
-}</div>
-        </div>
-
-        <!-- Pub 9 -->
-        <div class="pub-card" data-category="ir">
-          <div class="pub-title">Citation Worthiness Identification for Fine-Grained Citation Recommendation Systems</div>
-          <div class="pub-authors"><strong>M. Roostaee*</strong></div>
-          <div class="pub-venue">Iran J Sci Technol Trans Electr Eng, 46, 353–365, 2022. [Springer]</div>
-          <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-            <button class="action-btn" onclick="toggleBib('bib9')"><i class="fas fa-quote-right"></i> BibTeX</button>
-          </div>
-          <div id="bib9" class="bibtex-box">@article{roostaee2022citation,
-  title={Citation Worthiness Identification for Fine-Grained Citation Recommendation Systems},
-  author={Roostaee, Meysam},
-  journal={Iranian Journal of Science and Technology, Transactions of Electrical Engineering},
-  volume={46},
-  pages={353--365},
-  year={2022},
-  publisher={Springer}
-}</div>
-        </div>
-
-        <!-- Pub 10 -->
         <div class="pub-card" data-category="ir">
           <div class="pub-title">An effective approach to candidate retrieval for cross-language plagiarism detection</div>
           <div class="pub-authors"><strong>M. Roostaee*</strong>, M. H. Sadreddini, S. M. Fakhrahmad*</div>
           <div class="pub-venue">Information Processing & Management, 57(2), 102150, 2020. [Elsevier]</div>
           <div class="pub-actions">
             <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-            <button class="action-btn" onclick="toggleBib('bib10')"><i class="fas fa-quote-right"></i> BibTeX</button>
+            <button class="action-btn" onclick="toggleBib('bib7')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
-          <div id="bib10" class="bibtex-box">@article{roostaee2020effective,
+          <div id="bib7" class="bibtex-box">@article{roostaee2020effective,
   title={An effective approach to candidate retrieval for cross-language plagiarism detection},
   author={Roostaee, Meysam and Sadreddini, Mohammad Hadi and Fakhrahmad, Seyed Mostafa},
   journal={Information Processing \& Management},
@@ -770,16 +904,16 @@
 }</div>
         </div>
 
-        <!-- Pub 11 -->
+        <!-- Pub 8 -->
         <div class="pub-card" data-category="ir">
           <div class="pub-title">Cross-language text alignment: A proposed two-level matching scheme for plagiarism detection</div>
           <div class="pub-authors">M. Roostaee, S. M. Fakhrahmad*, M. H. Sadreddini</div>
           <div class="pub-venue">Expert Systems with Applications, 160, 113718, 2020. [Elsevier]</div>
           <div class="pub-actions">
             <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-            <button class="action-btn" onclick="toggleBib('bib11')"><i class="fas fa-quote-right"></i> BibTeX</button>
+            <button class="action-btn" onclick="toggleBib('bib8')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
-          <div id="bib11" class="bibtex-box">@article{roostaee2020cross,
+          <div id="bib8" class="bibtex-box">@article{roostaee2020cross,
   title={Cross-language text alignment: A proposed two-level matching scheme for plagiarism detection},
   author={Roostaee, Meysam and Fakhrahmad, Seyed Mostafa and Sadreddini, Mohammad Hadi},
   journal={Expert Systems with Applications},
@@ -793,16 +927,49 @@
       </div>
     </section>
 
+    <!-- Teaching Section -->
+    <section id="teaching">
+      <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> Teaching & Courses</h2>
+      <div class="teaching-grid">
+        
+        <div class="teaching-card">
+          <div class="teaching-level"><i class="fas fa-graduation-cap"></i> Graduate Level (M.Sc. & Ph.D.)</div>
+          <ul class="course-list">
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Natural Language Processing (NLP)</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Reinforcement Learning (RL)</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Advanced Information Retrieval</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Special Topics in Computer Engineering</li>
+          </ul>
+        </div>
+
+        <div class="teaching-card">
+          <div class="teaching-level"><i class="fas fa-university"></i> Undergraduate Level (B.Sc.)</div>
+          <ul class="course-list">
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Data Structures</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Operating Systems</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Compiler Design</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Software Engineering</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Theory of Languages and Automata</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Programming Languages Design</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Database Systems</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Discrete Mathematics & Logic Circuits</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Multimedia Systems</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Thesis Supervision & Lab -->
-    <section id="supervision">
+    <section id="students">
       <h2 class="section-title"><i class="fas fa-user-graduate"></i> Graduate Thesis Supervision</h2>
       <div class="students-grid">
         <div class="student-item">
-          <div class="student-thesis">Sarcastic content detection via semantic-emotional inconsistency modeling</div>
+          <div class="student-thesis">Sarcastic content detection by modeling semantic-emotional inconsistencies</div>
           <div class="student-name">Student: <strong>Parvin Akbari</strong> (2025)</div>
         </div>
         <div class="student-item">
-          <div class="student-thesis">Computational model for depression assessment via user content</div>
+          <div class="student-thesis">Computational model for depression assessment based on user-generated content</div>
           <div class="student-name">Student: <strong>Zeinab Davoudi</strong> (2025)</div>
         </div>
         <div class="student-item">
@@ -814,7 +981,7 @@
           <div class="student-name">Student: <strong>Fatemeh Shirzad</strong> (2025)</div>
         </div>
         <div class="student-item">
-          <div class="student-thesis">Navigation improvement using multimodal data matching</div>
+          <div class="student-thesis">Multimodal data matching for improving navigation tasks</div>
           <div class="student-name">Student: <strong>Hassan Zeynali</strong> (2025)</div>
         </div>
         <div class="student-item">
@@ -826,11 +993,11 @@
           <div class="student-name">Student: <strong>Riam Rashid Fashakh</strong> (2025)</div>
         </div>
         <div class="student-item">
-          <div class="student-thesis">Relation extraction from biomedical data via text mining</div>
+          <div class="student-thesis">Biomedical relation extraction via advanced text mining</div>
           <div class="student-name">Student: <strong>Maedeh Moradifar</strong> (2024)</div>
         </div>
         <div class="student-item">
-          <div class="student-thesis">Semantic steganography for sensitive natural language data</div>
+          <div class="student-thesis">Semantic steganography for protecting sensitive natural language information</div>
           <div class="student-name">Student: <strong>Seyedeh Fatemeh Homayouni</strong> (2024)</div>
         </div>
         <div class="student-item">
@@ -842,16 +1009,17 @@
 
     <!-- Professional Service -->
     <section id="service">
-      <h2 class="section-title"><i class="fas fa-check-circle"></i> Peer Review & Service</h2>
-      <p style="font-size: 0.95rem; margin-bottom: 1rem;">Active reviewer for international journals and venues:</p>
+      <h2 class="section-title"><i class="fas fa-check-circle"></i> Editorial & Peer Review Activities</h2>
+      <p style="font-size: 0.95rem; margin-bottom: 1rem;">Regularly serving as an active reviewer for international top-tier journals:</p>
       <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <span class="badge" style="background:#e0e7ff; color:#3730a3;"><i class="fas fa-award"></i> IEEE Trans. on Neural Networks and Learning Systems (TNNLS)</span>
         <span class="badge"><i class="fas fa-shield-alt"></i> Artificial Intelligence Review (Springer)</span>
         <span class="badge"><i class="fas fa-shield-alt"></i> Expert Systems with Applications (Elsevier)</span>
         <span class="badge"><i class="fas fa-shield-alt"></i> Information Processing and Management (Elsevier)</span>
         <span class="badge"><i class="fas fa-shield-alt"></i> Knowledge and Information Systems (Springer)</span>
         <span class="badge"><i class="fas fa-shield-alt"></i> IEEE Journal of Biomedical and Health Informatics</span>
-        <span class="badge"><i class="fas fa-shield-alt"></i> Biomedical Signal Processing and Control</span>
-        <span class="badge"><i class="fas fa-shield-alt"></i> Informatics in Medicine Unlocked</span>
+        <span class="badge"><i class="fas fa-shield-alt"></i> Biomedical Signal Processing and Control (Elsevier)</span>
+        <span class="badge"><i class="fas fa-shield-alt"></i> Informatics in Medicine Unlocked (Elsevier)</span>
       </div>
     </section>
 
@@ -859,7 +1027,7 @@
     <section id="contact">
       <h2 class="section-title"><i class="fas fa-envelope-open-text"></i> Contact & Collaboration</h2>
       <p style="font-size: 0.95rem;">
-        I am always open to academic collaborations, student mentorship, and industry data-science consulting. Feel free to get in touch:
+        I welcome discussions regarding academic collaborations, prospective student research, and industry AI partnerships:
       </p>
       <div style="margin-top: 1rem; font-size: 0.95rem;">
         <p><i class="fas fa-envelope" style="width: 22px; color: var(--accent);"></i> <strong>Email:</strong> <a href="mailto:m.roostaee@umz.ac.ir">m.roostaee@umz.ac.ir</a></p>
@@ -869,26 +1037,26 @@
 
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Dr. Meysam Roostaee. Hosted with GitHub Pages.</p>
+      <p>&copy; 2026 Dr. Meysam Roostaee &bull; Hosted on GitHub Pages</p>
     </div>
   </footer>
 
-  <!-- Scripts for Interactions -->
   <script>
     // BibTeX toggle
     function toggleBib(id) {
       const box = document.getElementById(id);
-      if (box.style.display === "block") {
-        box.style.display = "none";
-      } else {
-        box.style.display = "block";
-      }
+      box.style.display = (box.style.display === "block") ? "none" : "block";
     }
 
-    // Category filter for publications
+    // Abstract & Architecture drawer toggle
+    function toggleDetails(id) {
+      const box = document.getElementById(id);
+      box.style.display = (box.style.display === "block") ? "none" : "block";
+    }
+
+    // Publication category filter
     function filterPubs(cat) {
       const buttons = document.querySelectorAll('.filter-btn');
       buttons.forEach(btn => btn.classList.remove('active'));
