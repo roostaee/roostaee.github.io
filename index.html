@@ -66,8 +66,7 @@
     }
 
     html, body {
-      overflow-x: hidden; /* Prevents unwanted sideways wobbling on mobile */
-      width: 100%;
+      overflow-x: clip; /* Modern CSS: prevents mobile overflow WITHOUT breaking sticky headers */
     }
 
     body {
@@ -98,8 +97,10 @@
       position: sticky;
       top: 0;
       background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); /* Ensures it blurs smoothly on iPhones/Safari */
       border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04); /* Subtle shadow so text underneath doesn't clash */
       z-index: 1000;
     }
 
