@@ -819,7 +819,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
               <span class="keyword-pill">Adaptive Learning</span>
 			  <span class="keyword-pill">Autoencoder</span>
             </div>
-            <p><strong>Abstract:</strong>Concept drift in non-stationary data streams poses challenges to machine learning models by degrading predictive performance over time. Although unsupervised detectors resolve the practical limitation of label unavailability, many current approaches rely on fully adaptive frameworks where both the statistical reference and feature representation evolve continuously. This reliance on fluid baselines can lead to representational erosion, where the detector gradually loses its memory of the original concept, making it desensitized to significant, abrupt deviations. To address this deficiency, we propose Concept Anchor Drift Detection (CADD), a novel unsupervised framework. CADD establishes a stable semantic baseline by training a deep autoencoder a single time on an initial, trusted segment of the data stream. The resulting frozen encoder serves as a constant “Concept Anchor,” projecting all subsequent data into a fixed, semantically meaningful latent space. Drift is then detected by applying a dimension-wise Kolmogorov-Smirnov test to a sliding window of these anchored latent vectors. This design balances stability (via the fixed encoder) with plasticity (via the sliding window), preventing erosion while allowing adaptation to new valid concepts. A broad empirical evaluation on real-world and synthetic benchmarks demonstrates that CADD achieves highly competitive predictive performance, particularly excelling among single-model detectors in scenarios characterized by abrupt and significant distributional shifts. While acknowledging trade-offs in environments dominated by gradual or seasonal changes, CADD significantly outperforms adaptive baselines on abrupt drift benchmarks, validating the methodological value of a fixed representational anchor and introducing a robust, proactive tool for maintaining model reliability in evolving environments.</p>
+            <p><strong>Abstract:</strong> Concept drift in non-stationary data streams poses challenges to machine learning models by degrading predictive performance over time. Although unsupervised detectors resolve the practical limitation of label unavailability, many current approaches rely on fully adaptive frameworks where both the statistical reference and feature representation evolve continuously. This reliance on fluid baselines can lead to representational erosion, where the detector gradually loses its memory of the original concept, making it desensitized to significant, abrupt deviations. To address this deficiency, we propose Concept Anchor Drift Detection (CADD), a novel unsupervised framework. CADD establishes a stable semantic baseline by training a deep autoencoder a single time on an initial, trusted segment of the data stream. The resulting frozen encoder serves as a constant “Concept Anchor,” projecting all subsequent data into a fixed, semantically meaningful latent space. Drift is then detected by applying a dimension-wise Kolmogorov-Smirnov test to a sliding window of these anchored latent vectors. This design balances stability (via the fixed encoder) with plasticity (via the sliding window), preventing erosion while allowing adaptation to new valid concepts. A broad empirical evaluation on real-world and synthetic benchmarks demonstrates that CADD achieves highly competitive predictive performance, particularly excelling among single-model detectors in scenarios characterized by abrupt and significant distributional shifts. While acknowledging trade-offs in environments dominated by gradual or seasonal changes, CADD significantly outperforms adaptive baselines on abrupt drift benchmarks, validating the methodological value of a fixed representational anchor and introducing a robust, proactive tool for maintaining model reliability in evolving environments.</p>
             <div class="pub-figure-container">
               <img src="images/papers/cadd-arch.png" alt="CADD Architecture" onerror="this.parentElement.style.display='none'">
               <div class="pub-figure-caption">Figure: Concept anchor tracking workflow across dynamic stream windows.</div>
@@ -923,7 +923,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S1110016826000402}
           <div class="pub-authors"><strong>M. Roostaee*</strong>, S. M. Fakhrahmad, M. H. Sadreddini</div>
           <div class="pub-venue">Information and Software Technology, 108056, 2026. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="https://doi.org/10.1016/j.infsof.2026.108056" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
             <button class="action-btn" onclick="toggleDetails('det5')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib5')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
@@ -969,13 +969,16 @@ url = {https://www.sciencedirect.com/science/article/pii/S1110016826000402}
 			</p>
 		</div>
 
-          <div id="bib5" class="bibtex-box">@article{roostaee2026conker,
-  title={CONKER: CONtrastive knowledge enhanced retrieval for app review bug classification},
-  author={Roostaee, Meysam and Fakhrahmad, S. M. and Sadreddini, M. H.},
-  journal={Information and Software Technology},
-  pages={108056},
-  year={2026},
-  publisher={Elsevier}
+          <div id="bib5" class="bibtex-box">@article{ROOSTAEE2026108056,
+  title = {CONKER: CONtrastive knowledge enhanced retrieval for app review bug classification},
+  author = {Meysam Roostaee and Seyed Mostafa Fakhrahmad and Mohammad Hadi Sadreddini},
+journal = {Information and Software Technology},
+volume = {193},
+pages = {108056},
+year = {2026},
+issn = {0950-5849},
+doi = {10.1016/j.infsof.2026.108056},
+url = {https://www.sciencedirect.com/science/article/pii/S0950584926000455}
 }</div>
         </div>
 
@@ -985,28 +988,36 @@ url = {https://www.sciencedirect.com/science/article/pii/S1110016826000402}
           <div class="pub-authors"><strong>M. Roostaee*</strong>, M. H. Soheilian</div>
           <div class="pub-venue">Knowledge-Based Systems, 115247, 2025. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="https://doi.org/10.1016/j.knosys.2025.115247" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
             <button class="action-btn" onclick="toggleDetails('det6')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib6')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
 
           <div id="det6" class="pub-details">
             <div class="keyword-list">
+				<span class="keyword-pill">Concept drift</span>
+			  <span class="keyword-pill">Data stream mining</span>
+			  <span class="keyword-pill">Unsupervised learning</span>
+			  <span class="keyword-pill">Data stream mining</span>
               <span class="keyword-pill">Residual Analysis</span>
+			  <span class="keyword-pill">Statistical process control</span>
+			  <span class="keyword-pill">Streaming Data</span>
               <span class="keyword-pill">Unsupervised Drift Detection</span>
               <span class="keyword-pill">Intelligent Systems</span>
-              <span class="keyword-pill">Streaming Data</span>
             </div>
-            <p><strong>Abstract:</strong> Most concept drift detectors rely on timely label availability—an unrealistic assumption in real deployments. ReDiST leverages lightweight residual monitoring across statistical projections to detect drifts completely unsupervised with exceptional computational efficiency.</p>
+            <p><strong>Abstract:</strong> The long-term reliability of deployed intelligent systems is critically undermined by concept drift, leading to silent performance degradation and catastrophic failures in high-stakes applications. Current drift detectors force a debilitating compromise: practitioners must choose between slow, label-dependent methods that are impractical for real-time streams, or faster unsupervised methods that lack the sensitivity to detect complex distributional shifts. This paper introduces ReDiST (Residual Distribution Shift Tester), a novel unsupervised framework that overcomes this compromise through a new paradigm: discriminative residual analysis. Instead of comparing complex data distributions directly, ReDiST reframes drift detection as a computationally efficient analysis of the error patterns from a lightweight probe model trained on a synthetic temporal task. This approach efficiently translates complex, high-dimensional shifts into a robust, one-dimensional statistical signal. A comprehensive evaluation against twelve state-of-the-art detectors on eleven benchmarks demonstrates that ReDiST: (1) achieves predictive accuracy statistically on par with top-tier supervised ensembles, without requiring any ground-truth labels; (2) ranks first in computational efficiency across all datasets, running up to 58 times faster than its most accurate supervised competitor; and (3) delivers a powerful combination of accuracy, speed, and label-free operation, validated through extensive internal signal and sensitivity analysis. ReDiST provides a practical, scalable solution for building robust, adaptive, and reliable intelligent systems capable of operating effectively in dynamic real-world environments.</p>
           </div>
 
-          <div id="bib6" class="bibtex-box">@article{roostaee2025redist,
-  title={ReDiST: A Lightweight Residual Analysis Framework for Fast and Accurate Unsupervised Drift Detection in Intelligent Systems},
-  author={Roostaee, Meysam and Soheilian, M. H.},
-  journal={Knowledge-Based Systems},
-  pages={115247},
-  year={2025},
-  publisher={Elsevier}
+          <div id="bib6" class="bibtex-box">@article{ROOSTAEE2026115247,
+  title = {ReDiST : A lightweight residual analysis framework for fast and accurate unsupervised drift detection in intelligent systems},
+author = {Meysam Roostaee and Mohammad Hosein Soheilian},
+journal = {Knowledge-Based Systems},
+volume = {335},
+pages = {115247},
+year = {2026},
+issn = {0950-7051},
+doi = {10.1016/j.knosys.2025.115247},
+url = {https://www.sciencedirect.com/science/article/pii/S0950705125022816}
 }</div>
         </div>
 
@@ -1016,18 +1027,32 @@ url = {https://www.sciencedirect.com/science/article/pii/S1110016826000402}
           <div class="pub-authors"><strong>M. Roostaee*</strong>, M. H. Sadreddini, S. M. Fakhrahmad*</div>
           <div class="pub-venue">Information Processing & Management, 57(2), 102150, 2020. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="https://doi.org/10.1016/j.ipm.2019.102150" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
             <button class="action-btn" onclick="toggleBib('bib7')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
-          <div id="bib7" class="bibtex-box">@article{roostaee2020effective,
-  title={An effective approach to candidate retrieval for cross-language plagiarism detection},
-  author={Roostaee, Meysam and Sadreddini, Mohammad Hadi and Fakhrahmad, Seyed Mostafa},
-  journal={Information Processing \& Management},
-  volume={57},
-  number={2},
-  pages={102150},
-  year={2020},
-  publisher={Elsevier}
+		  
+		  <div id="det7" class="pub-details">
+            <div class="keyword-list">
+				<span class="keyword-pill">Plagiarism detection</span>
+			  <span class="keyword-pill">Cross-language plagiarism</span>
+			  <span class="keyword-pill">Candidate retrieval</span>
+			  <span class="keyword-pill">Conceptual model</span>
+              <span class="keyword-pill">Keyword-based model</span>			  
+            </div>
+            <p><strong>Abstract:</strong> Due to the rapid growth of documents and manuscripts in various languages all over the world, plagiarism detection has become a challenging task, especially for cross lingual cases. Because of this issue, in today's plagiarism detection systems, a candidate retrieval process is developed as the first step, in order to reduce the set of documents for comparison to a reasonable number. The performance of the second step of plagiarism detection, which is devoted to a detailed analysis of the candidates is tightly dependent on the candidate retrieval phase. Regarding its high importance, the present study focuses on the candidate retrieval task and aims to extract the minimal set of highly potential source documents, accurately. The paper proposes a fusion of concept-based and keyword-based retrieval models for this purpose. A dynamic interpolation factor is used in the proposed scheme in order to combine the results of conceptual and bag-of-words models. The effectiveness of the proposed model for cross language candidate retrieval is also compared with state-of-the-art models over German-English and Spanish-English language partitions. The results show that the proposed candidate retrieval model outperforms the state-of-the-art models and can be considered as a proper choice to be embedded in cross-language plagiarism detection systems.</p>
+          </div>
+		  	  
+          <div id="bib7" class="bibtex-box">@article{ROOSTAEE2020102150,
+title = {An effective approach to candidate retrieval for cross-language plagiarism detection: A fusion of conceptual and keyword-based schemes},
+author = {Meysam Roostaee and Mohammad Hadi Sadreddini and Seyed Mostafa Fakhrahmad},
+journal = {Information Processing & Management},
+volume = {57},
+number = {2},
+pages = {102150},
+year = {2020},
+issn = {0306-4573},
+doi = {10.1016/j.ipm.2019.102150},
+url = {https://www.sciencedirect.com/science/article/pii/S0306457318310148}
 }</div>
         </div>
 
@@ -1037,17 +1062,33 @@ url = {https://www.sciencedirect.com/science/article/pii/S1110016826000402}
           <div class="pub-authors">M. Roostaee, S. M. Fakhrahmad*, M. H. Sadreddini</div>
           <div class="pub-venue">Expert Systems with Applications, 160, 113718, 2020. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="https://doi.org/10.1016/j.eswa.2020.113718" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
             <button class="action-btn" onclick="toggleBib('bib8')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
-          <div id="bib8" class="bibtex-box">@article{roostaee2020cross,
-  title={Cross-language text alignment: A proposed two-level matching scheme for plagiarism detection},
-  author={Roostaee, Meysam and Fakhrahmad, Seyed Mostafa and Sadreddini, Mohammad Hadi},
-  journal={Expert Systems with Applications},
-  volume={160},
-  pages={113718},
-  year={2020},
-  publisher={Elsevier}
+		  
+		  
+		  <div id="det8" class="pub-details">
+            <div class="keyword-list">
+				<span class="keyword-pill">Plagiarism detection</span>
+			  <span class="keyword-pill">Cross-language plagiarism</span>
+			  <span class="keyword-pill">Text alignment</span>
+			  <span class="keyword-pill">Graph-of-words representation</span>
+              <span class="keyword-pill">Multilingual word embeddings</span>	
+			  <span class="keyword-pill">Detailed Analysis</span>	
+            </div>
+            <p><strong>Abstract:</strong> The exponential growth of documents in various languages throughout the web, along with the availability of several editing and translation tools have made the cross-language plagiarism detection a challenging issue. Regarding its high importance, the present study focuses on the task of cross-language text alignment also known as detailed analysis which works on the outputs of the source retrieval step of cross-language plagiarism detection systems. The paper proposes a two-level matching approach with the aim of considering both syntactic and semantic information to align plagiarism fragments from the source and suspicious documents, accurately. At the first level, a vector space model which employs a multilingual word embeddings based dictionary and a local weighting technique is used in order to extract a minimal set of highly potential candidate fragment pairs rather than considering all possible pairs of fragments. This step also contains a dynamic expansion technique to cover more candidate pairs aiming at improving the system’s recall. It is followed by a more precise algorithm that examines the candidate pairs at the sentence level using a graph-of-words representation of text. As a result, by modelling both the words and their relationships, an acceptable increase in the system’s precision which is the goal of the second level is also observed. To identify evidence of plagiarism, i.e. potential cases of unauthorized text reuse, the algorithm tries to find maximum cliques from the match graph of source and suspicious texts. With this two-level investigation, the approach is capable to discriminate true plagiarism cases from the original text. The experimental results on different datasets such as PAN-PC-11, PAN-PC-12, and SemEval-2017 show that the proposed cross-language text alignment approach significantly outperforms the state-of-the-art models and can be fed into an expert system for further improvement of cross-language plagiarism detection. The source codes are publicly available on GitHub1, for the purposes of reproducible research.</p>
+          </div>
+		  
+          <div id="bib8" class="bibtex-box">@article{ROOSTAEE2020113718,
+title = {Cross-language text alignment: A proposed two-level matching scheme for plagiarism detection},
+author = {Meysam Roostaee and Seyed Mostafa Fakhrahmad and Mohammad Hadi Sadreddini},
+journal = {Expert Systems with Applications},
+volume = {160},
+pages = {113718},
+year = {2020},
+issn = {0957-4174},
+doi = {10.1016/j.eswa.2020.113718},
+url = {https://www.sciencedirect.com/science/article/pii/S095741742030542X}
 }</div>
         </div>
 
