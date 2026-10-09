@@ -1019,6 +1019,102 @@ url = {https://www.sciencedirect.com/science/article/pii/S0950705125022816}
 }</div>
         </div>
 
+<!-- IJE 2024 Paper -->
+        <div class="pub-card" data-category="ir nlp">
+          <div class="pub-title">Language-independent Profile-based Tag Recommendation for Community Question Answering Systems</div>
+          <div class="pub-authors"><strong>M. Roostaee*</strong></div>
+          <div class="pub-venue">International Journal of Engineering, Transactions C: Aspects, 37(12), 2547–2559, 2024. [Open Access]</div>
+          
+          <div class="pub-actions">
+            <a href="https://doi.org/10.5829/ije.2024.37.12c.13" class="action-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Paper (DOI)</a>
+            <a href="Papers/10.5829_ije.2024.37.12c.13.pdf" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+            <button class="action-btn" onclick="toggleDetails('det_ije2024')"><i class="fas fa-info-circle"></i> Abstract & Architecture</button>
+            <button class="action-btn" onclick="toggleBib('bib_ije2024')"><i class="fas fa-quote-right"></i> BibTeX</button>
+          </div>
+		  
+          <!-- Collapsible Abstract & Graphical Abstract -->
+          <div id="det_ije2024" class="pub-details">
+            <div class="keyword-list">
+              <span class="keyword-pill">Tag Recommendation</span>
+              <span class="keyword-pill">Community Question-Answering (CQA)</span>
+              <span class="keyword-pill">Language-Independent</span>
+              <span class="keyword-pill">Low-Resource Languages</span>
+              <span class="keyword-pill">TF-IDF Adaptation</span>
+              <span class="keyword-pill">PerTagSet</span>
+            </div>
+            <p><strong>Abstract:</strong> Community question-answering (CQA) systems are helpful for knowledge sharing. However, they can become difficult to manage as the number of questions and answers increases. Effective tag recommendation facilitates the discovery of relevant material, yet prevailing methods typically depend on language-specific resources or necessitate sophisticated Natural Language Processing (NLP) tools, rendering them unsuitable for less-resourced languages. This paper introduces a novel profile-based tag recommendation strategy that transcends language and structural barriers. The approach leverages raw text data without the need for complex text mining tools. By constructing distinct profiles for each tag from key terms in associated questions, the method enables a nuanced content association. An adaptation of the Term Frequency-Inverse Document Frequency (TF-IDF) metric is proposed to calculate similarity and recommend tags aligned with these profiles. The efficacy of this approach is validated across datasets in both English and Persian, showcasing comparable to or superior recall rates against baseline models and contemporary advanced systems. This methodology is straightforward to implement, offering a valuable tool for enhancing content accessibility in CQA platforms, particularly for low-resource languages.</p>
+            
+            <div class="pub-figure-container">
+              <!-- Crop the Graphical Abstract flowchart from Page 1 and save as images/papers/tag-rec-architecture.png -->
+              <img src="images/papers/tag-rec-architecture.png" alt="Tag Recommendation Architecture" onerror="this.parentElement.style.display='none'">
+              <div class="pub-figure-caption">Figure: Pipeline of offline tag-profile generation and online profile-based tag recommendation.</div>
+            </div>
+          </div>
+		  	  
+          <!-- Collapsible BibTeX -->
+          <div id="bib_ije2024" class="bibtex-box">@article{roostaee2024language,
+  title={Language-independent Profile-based Tag Recommendation for Community Question Answering Systems},
+  author={Roostaee, Meysam},
+  journal={International Journal of Engineering, Transactions C: Aspects},
+  volume={37},
+  number={12},
+  pages={2547--2559},
+  year={2024},
+  publisher={Materials and Energy Research Center},
+  issn={1025-2495},
+  doi={10.5829/ije.2024.37.12c.13},
+  url={https://www.ije.ir/article_200065.html}
+}</div>
+        </div>
+
+<!-- JAIDM 2023 Paper -->
+        <div class="pub-card" data-category="health">
+          <div class="pub-title">Hidden Pattern Discovery on Clinical Data: an Approach based on Data Mining Techniques</div>
+          <div class="pub-authors"><strong>M. Roostaee*</strong>, R. Meidanshahi</div>
+          <div class="pub-venue">Journal of AI and Data Mining (JAIDM), 11(3), 343–355, 2023. [Open Access]</div>
+          
+          <div class="pub-actions">
+            <a href="https://doi.org/10.22044/jadm.2023.12855.2435" class="action-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Paper (DOI)</a>
+            <a href="Papers/JADM_Volume 11_Issue 3_Pages 343-355.pdf" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+            <button class="action-btn" onclick="toggleDetails('det_jaidm2023')"><i class="fas fa-info-circle"></i> Abstract & Workflow</button>
+            <button class="action-btn" onclick="toggleBib('bib_jaidm2023')"><i class="fas fa-quote-right"></i> BibTeX</button>
+          </div>
+		  
+          <!-- Collapsible Abstract & Clinical Workflow -->
+          <div id="det_jaidm2023" class="pub-details">
+            <div class="keyword-list">
+              <span class="keyword-pill">Clinical Data</span>
+              <span class="keyword-pill">Data Mining</span>
+              <span class="keyword-pill">Unsupervised Learning</span>
+              <span class="keyword-pill">Association Rule Mining</span>
+              <span class="keyword-pill">K-Means Clustering</span>
+              <span class="keyword-pill">Blood Biomarkers</span>
+            </div>
+            <p><strong>Abstract:</strong> In this study, we sought to minimize the need for redundant blood tests in diagnosing common diseases by leveraging unsupervised data mining techniques on a large-scale dataset of over one million patients' blood test results. We excluded non-numeric and subjective data to ensure precision. In order to identify relationships between attributes, we applied a suite of unsupervised methods including preprocessing, clustering, and association rule mining. Our approach uncovered correlations that enable healthcare professionals to detect potential acute diseases early, improving patient outcomes, and reducing costs. The reliability of our extracted patterns also suggests that this approach can lead to significant time and cost savings while reducing the workload for laboratory personnel. Our study highlights the importance of big data analytics and unsupervised learning techniques in increasing efficiency in healthcare centers.</p>
+            
+            <div class="pub-figure-container">
+              <!-- Crop Figure 1 from Page 3 and save as images/papers/clinical-pattern-workflow.png -->
+              <img src="images/papers/clinical-pattern-workflow.png" alt="Clinical Workflow Diagram" onerror="this.parentElement.style.display='none'">
+              <div class="pub-figure-caption">Figure: Overall unsupervised workflow for clinical blood biomarker pattern discovery.</div>
+            </div>
+          </div>
+		  	  
+          <!-- Collapsible BibTeX -->
+          <div id="bib_jaidm2023" class="bibtex-box">@article{roostaee2023hidden,
+  title={Hidden Pattern Discovery on Clinical Data: an Approach based on Data Mining Techniques},
+  author={Roostaee, Meysam and Meidanshahi, Razieh},
+  journal={Journal of AI and Data Mining},
+  volume={11},
+  number={3},
+  pages={343--355},
+  year={2023},
+  publisher={Shahrood University of Technology},
+  issn={2322-5211},
+  doi={10.22044/jadm.2023.12855.2435},
+  url={https://jad.shahroodut.ac.ir/article_2857.html}
+}</div>
+        </div>
+
  <!-- Pub 7 -->
         <div class="pub-card" data-category="IR">
           <div class="pub-title">An effective approach to candidate retrieval for cross-language plagiarism detection</div>
