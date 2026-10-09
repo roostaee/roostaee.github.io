@@ -795,7 +795,6 @@ year = {2026},
 issn = {2352-9148},
 doi = {10.1016/j.imu.2026.101781},
 url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
-
 }</div>
         </div>
 
@@ -848,7 +847,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
           <div class="pub-authors"><strong>M. Roostaee*</strong></div>
           <div class="pub-venue">Iranian Journal of Science and Technology, Transactions of Electrical Engineering, 2026. [Springer]</div>
           <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="https://doi.org/10.1007/s40998-026-01073-8" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
             <button class="action-btn" onclick="toggleDetails('det3')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib3')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
@@ -857,18 +856,25 @@ url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
             <div class="keyword-list">
               <span class="keyword-pill">Large Language Models</span>
               <span class="keyword-pill">Cold-Start Problem</span>
-              <span class="keyword-pill">Synthetic Data Generation</span>
+              <span class="keyword-pill">Augmented review generation</span>
+			  <span class="keyword-pill">Semantic retrieval</span>
+			  <span class="keyword-pill">Aspect-based segmentation</span>
+			  <span class="keyword-pill">Prompt engineering</span>
               <span class="keyword-pill">Feedback Systems</span>
+			  <span class="keyword-pill">Synthetic Data Generation</span>
             </div>
-            <p><strong>Abstract:</strong> Cold-start scenarios in recommendation and feedback platforms suffer from extreme sparsity. This research investigates prompt-steered LLM synthesis to generate realistic, domain-grounded synthetic user reviews that bootstrap downstream recommender systems without injecting distributional bias.</p>
+            <p><strong>Abstract:</strong> E-commerce platforms face the challenge of the “cold-start” problem, where new products lack user reviews crucial for buyer decisions. This paper introduces a novel Large Language Model (LLM)-driven approach for generating high-quality augmented reviews for cold-start products by utilizing reviews from semantically similar “warm” products. The proposed method follows a two-stage framework: Initially, an advanced semantic retrieval mechanism is deployed, enhanced through a data-driven attribute weighting strategy. This attribute weighting is derived via a zero-shot aspect-based segmentation technique, guided by a strategically engineered prompting approach to optimize attribute weights. This initial stage ensures the precise extraction of semantically relevant warm product reviews. Subsequently, in the second stage, these retrieved segments are refined, filtering out irrelevant content to maximize alignment with the cold product’s characteristics. Evaluated on two comprehensive datasets from CNET.com (Digital Cameras and MP3 Players), the method demonstrates a substantial average improvement of 65% in ROUGE score metrics compared to traditional baseline approaches (e.g., Query Likelihood) across varying review lengths. Furthermore, it achieves superior performance compared to the state-of-the-art embedding-based method, attaining a ROUGE-2 F1-score of 0.093 on Digital Cameras and 0.113 on MP3 Players (representing improvements of approximately 3%). By enhancing the informativeness and reliability of generated reviews, this work presents a significant step forward in mitigating the cold-start problem, enhancing the online e-commerce experience for both buyers and sellers.</p>
           </div>
 
-          <div id="bib3" class="bibtex-box">@article{roostaee2026zero,
-  title={Zero to Feedback: Leveraging Large Language Models for Augmented Review Generation in Cold-Start Scenarios},
-  author={Roostaee, Meysam},
-  journal={Iranian Journal of Science and Technology, Transactions of Electrical Engineering},
-  year={2026},
-  publisher={Springer}
+          <div id="bib3" class="bibtex-box">@article{Roostaee2026ColdStart,
+  title   = {Zero to Feedback: Leveraging Large Language Models for Augmented Review Generation in Cold-Start Scenarios},
+  author  = {Roostaee, Meysam},
+  journal = {Iranian Journal of Science and Technology, Transactions of Electrical Engineering},
+  year    = {2026},
+  month   = apr,
+  doi     = {10.1007/s40998-026-01073-8},
+  url     = {https://doi.org/10.1007/s40998-026-01073-8},
+  issn    = {2364-1827}
 }</div>
         </div>
 
@@ -878,7 +884,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
           <div class="pub-authors">H. Katal, J. Ghasemi*, <strong>M. Roostaee</strong></div>
           <div class="pub-venue">Alexandria Engineering Journal, vol. 137, pp. 505-520, 2026. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="Papers/1-s2.0-S1110016826000402-main.pdf" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
             <button class="action-btn" onclick="toggleDetails('det4')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib4')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
@@ -887,21 +893,27 @@ url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
             <div class="keyword-list">
               <span class="keyword-pill">Clinical NLP</span>
               <span class="keyword-pill">Chest X-Ray Reports</span>
-              <span class="keyword-pill">Zero-Shot Classification</span>
+              <span class="keyword-pill">Zero-Shot learning</span>
+			  <span class="keyword-pill">Large language models</span>
               <span class="keyword-pill">Prompt Engineering</span>
-              <span class="keyword-pill">LLMs</span>
+              <span class="keyword-pill">MIMIC-CXR dataset</span>
+			  <span class="keyword-pill">Zero-shot Classification</span>
+			  <span class="keyword-pill">LLMs</span>
+			  <span class="keyword-pill">In-context learning</span>
             </div>
-            <p><strong>Abstract:</strong> Addressing the annotation bottleneck in medical imaging, this work demonstrates how targeted prompt engineering on radiologist text reports enables accurate zero-shot disease categorization, matching supervised performance without task-specific retraining.</p>
+            <p><strong>Abstract:</strong> Accurately extracting structured clinical labels from unstructured chest radiology reports, particularly the MIMIC-CXR dataset, is critical for robust Clinical Decision Support Systems. However, conventional supervised deep learning faces major challenges: reliance on expert-annotated datasets, which are costly and time-consuming to curate, and the computational overhead of training or fine-tuning complex models. To circumvent these limitations, this study proposes a Prompt based Zero Shot Learning Framework that leverages the semantic reasoning capabilities of pre trained LLM to classify radiology reports without requiring gradient-based training or labeled data. We systematically investigate the impact of various text preprocessing pipelines and prompt engineering strategies, including task specific prompts, Persona based instructions, Chain of Thought reasoning, and Ensemble Prompting, alongside mechanisms for managing label uncertainty. Experimental results demonstrate that the optimal configuration, utilizing the IMPRESSION section of reports with specific uncertainty handling, achieves a weighted average F1 score of 0.85 and an Area Under the Curve of 0.92. These results significantly outperform traditional rule based labelers and unsupervised baselines in the domain of clinical text classification. This study substantiates the potential of NLP and prompt engineering to automate medical report structuring, offering a scalable and label free alternative to traditional supervised learning for healthcare applications.</p>
           </div>
 
-          <div id="bib4" class="bibtex-box">@article{katal2026beyond,
-  title={Beyond pixels: Zero-shot classification of chest X-ray reports via prompt engineering and LLMs},
-  author={Katal, H. and Ghasemi, J. and Roostaee, Meysam},
-  journal={Alexandria Engineering Journal},
-  volume={137},
-  pages={505--520},
-  year={2026},
-  publisher={Elsevier}
+          <div id="bib4" class="bibtex-box">@article{KATAL2026505,
+title = {Beyond pixels: Zero-shot classification of chest X-ray reports via prompt engineering and LLMs},
+author = {Hassan Katal and Jamal Ghasemi and Meysam Roostaee},
+journal = {Alexandria Engineering Journal},
+volume = {137},
+pages = {505-520},
+year = {2026},
+issn = {1110-0168},
+doi = {10.1016/j.aej.2026.01.022},
+url = {https://www.sciencedirect.com/science/article/pii/S1110016826000402}
 }</div>
         </div>
 
@@ -918,13 +930,44 @@ url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
 
           <div id="det5" class="pub-details">
             <div class="keyword-list">
-              <span class="keyword-pill">Software Repository Mining</span>
-              <span class="keyword-pill">Bug Classification</span>
-              <span class="keyword-pill">Contrastive Learning</span>
-              <span class="keyword-pill">Knowledge Retrieval</span>
+				<span class="keyword-pill">App Review Analysis</span>
+				<span class="keyword-pill">Contrastive learning</span>
+				<span class="keyword-pill">Classification-by-retrieval</span>
+				<span class="keyword-pill">Interpretability</span>
+				<span class="keyword-pill">Software maintenance</span>
+				<span class="keyword-pill">Bug Classification</span>
+				<span class="keyword-pill">Knowledge Retrieval</span>
+				<span class="keyword-pill">Software Repository Mining</span>
             </div>
-            <p><strong>Abstract:</strong> Mobile application reviews contain crucial bug reports alongside unstructured noise. CONKER integrates contrastive representations and domain knowledge to retrieve and classify bug-related feedback with high precision for software maintenance teams.</p>
-          </div>
+
+			<div>
+			<p><strong>Abstract</strong></p>
+
+			<p>
+				<strong>Context:</strong>
+				Accurate and timely identification of software defects from user-generated app reviews is crucial for efficient software maintenance. However, automated classifiers face challenges with the volume and heterogeneity of review text, often struggling with generalization, decision transparency, and learning from limited labeled examples per bug category.
+			</p>
+
+			<p>
+				<strong>Objective:</strong>
+				This paper introduces CONKER (CONtrastive Knowledge Enhanced Retrieval), a novel framework to address these issues by improving accuracy and providing inherent interpretability for multi-class app review bug classification.
+			</p>
+
+			<p>
+				<strong>Methods:</strong>
+				CONKER employs a two-stage process. First, a transformer-based sentence encoder is fine-tuned using supervised contrastive learning (Multiple Negatives Ranking Loss) on the MABLE benchmark to create a discriminative embedding space. Second, a classification-by-retrieval mechanism assigns labels by matching new reviews against curated class-specific exemplars. The framework is evaluated using 10-fold cross-validation, an ablation study, and a human-in-the-loop study with professional developers.
+			</p>
+
+			<p>
+				<strong>Results:</strong>
+				On the MABLE dataset, CONKER achieves a new state-of-the-art weighted F1-score of 0.8133. Critically, it also attains a Macro F1-score over 13 percentage points higher than the strongest baseline, demonstrating superior performance on minority classes. A new zero-shot experiment provides quantitative evidence of its strong cross-platform generalization, where CONKER outperforms a RoBERTa baseline by 10.1 percentage points on a developer-annotated Apple App Store dataset. This is complemented by a human-in-the-loop study that validated the practical utility of CONKER's exemplar-based explanations. Ablation studies confirm that both the contrastive fine-tuning and the per-class retrieval architecture are fundamental to this multi-faceted success.
+			</p>
+
+			<p>
+				<strong>Conclusion:</strong>
+				Contrastive learning-driven retrieval is a scalable, interpretable, and high-fidelity approach for nuanced text categorization in empirical software engineering. The CONKER framework demonstrates that by engineering a task-specific semantic space, it is possible to reconcile high predictive accuracy with the transparency required for practical software maintenance workflows.
+			</p>
+		</div>
 
           <div id="bib5" class="bibtex-box">@article{roostaee2026conker,
   title={CONKER: CONtrastive knowledge enhanced retrieval for app review bug classification},
