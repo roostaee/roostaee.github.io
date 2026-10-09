@@ -762,34 +762,40 @@
           <div class="pub-authors">Z. Davoudi, <strong>M. Roostaee*</strong>, K. Aghajani</div>
           <div class="pub-venue">Informatics in Medicine Unlocked, vol. 64, 101781, 2026. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="papers/1-s2.0-S2352914826000511-main.pdf" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
             <button class="action-btn" onclick="toggleDetails('det1')"><i class="fas fa-info-circle"></i> Abstract & Architecture</button>
             <button class="action-btn" onclick="toggleBib('bib1')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
           
           <div id="det1" class="pub-details">
             <div class="keyword-list">
-              <span class="keyword-pill">Generative AI</span>
-              <span class="keyword-pill">Depression Detection</span>
-              <span class="keyword-pill">Knowledge-Augmented Reasoning</span>
-              <span class="keyword-pill">Information Fusion</span>
-              <span class="keyword-pill">Mental Health</span>
+              <span class="keyword-pill">Depression detection</span>
+              <span class="keyword-pill">Information fusion</span>
+              <span class="keyword-pill">Knowledge-Augmented AI</span>
+              <span class="keyword-pill">Large language models</span>
+              <span class="keyword-pill">Social media mining</span>
+			  <span class="keyword-pill">Clinical dialogue systems</span>
+			  <span class="keyword-pill">Multimodal affective computing</span>
+			  <span class="keyword-pill">Mental Health</span>
             </div>
-            <p><strong>Abstract:</strong> This paper introduces an information-fusion framework combining ensemble learning with knowledge-augmented reasoning to detect depressive symptoms in user-generated text. By integrating generative AI priors with clinical psychiatric knowledge bases, the model captures nuanced linguistic and emotional signals, significantly outperforming conventional baselines.</p>
+            <p><strong>Abstract:</strong> Computational depression detection has reached a saturation point with standard end-to-end deep learning paradigms. To navigate the rapid proliferation of highly complex models, this systematic scoping review analyzes 87 primary post-LLM studies, spanning both “in-the-wild” social media and structured clinical interactions, published primarily between January 2024 and April 2026. Evaluated alongside 7 foundational 2023 baselines (totaling 94 core methodology papers out of 111 cited references), these works mark a distinct methodological transition from isolated feature engineering to multimodal and architectural synthesis. We introduce a novel taxonomy that categorizes these emerging approaches into four information fusion paradigms: (1) Architecture Fusion, which hybridizes heterogeneous neural components to capture complementary spatiotemporal dependencies; (2) Knowledge Fusion, which injects structured external clinical knowledge (e.g., DSM-5 ontologies) into neural pipelines to bridge the semantic gap; (3) Generative Fusion, which integrates in-context learning (ICL), retrieval-augmented generation (RAG), and parameter-efficient fine-tuning (PEFT); and (4) Data-Level Fusion, which addresses multimodal alignment, dynamic fusion timing, and temporal modeling. Our critical analysis reveals that while zero-shot large language models (LLMs) offer broad semantic reasoning capabilities, fine-tuned encoders and hybrid architectures integrated with domain-specific knowledge currently provide a more rigorously validated balance of reliability, explainability, and performance. We conclude by exposing the “illusion of accuracy” prevalent in proxy-labeled benchmarks and outlining strategic directions for developing clinically valid, privacy-preserving detection systems suitable for real-world clinical workflows.</p>
             <div class="pub-figure-container">
               <img src="images/papers/depression-fusion.png" alt="Framework Architecture" onerror="this.parentElement.style.display='none'">
               <div class="pub-figure-caption">Figure: Overview of knowledge-augmented information fusion architecture.</div>
             </div>
           </div>
 
-          <div id="bib1" class="bibtex-box">@article{davoudi2026ensembles,
-  title={From ensembles to knowledge-augmented reasoning: Information fusion for depression detection in the generative AI era},
-  author={Davoudi, Z. and Roostaee, Meysam and Aghajani, K.},
-  journal={Informatics in Medicine Unlocked},
-  volume={64},
-  pages={101781},
-  year={2026},
-  publisher={Elsevier}
+          <div id="bib1" class="bibtex-box">@article{DAVOUDI2026101781,
+title = {From ensembles to knowledge-augmented reasoning: Information fusion for depression detection in the generative AI era},
+journal = {Informatics in Medicine Unlocked},
+volume = {64},
+pages = {101781},
+year = {2026},
+issn = {2352-9148},
+doi = {https://doi.org/10.1016/j.imu.2026.101781},
+url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511},
+author = {Zeynab Davoudi and Meysam Roostaee and Khadijeh Aghajani},
+keywords = {Depression detection, Information fusion, Knowledge-augmented AI, Large language models, Social media mining, Clinical dialogue systems, Multimodal affective computing}
 }</div>
         </div>
 
