@@ -262,25 +262,25 @@
       box-shadow: 0 8px 16px rgba(0,0,0,0.06);
     }
 
-    .featured-image {
+     .featured-image {
       width: 100%;
-      height: 170px;
+      height: 205px; /* Increased from 170px so diagrams have more height */
       background-color: #f8fafc;
       border-bottom: 1px solid var(--border-color);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
+      padding: 0.35rem; /* Reduced from 1rem to remove the wide empty borders */
     }
 
     .featured-image img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Automatically scales the diagram as large as possible without cutting it */
     }
 
     .featured-content {
-      padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+      padding: 1.4rem 1.5rem 0.5rem 1.5rem;
       flex-grow: 1;
     }
 
@@ -305,10 +305,14 @@
       line-height: 1.35;
     }
 
+    /* Justified text */
     .featured-desc {
       font-size: 0.92rem;
       color: var(--text-main);
       margin-bottom: 0.8rem;
+      line-height: 1.6;
+      text-align: justify; /* Justifies the text edges cleanly */
+      text-justify: inter-word;
     }
 
     /* Filter Buttons */
@@ -1106,7 +1110,7 @@
             <li>
               <div style="line-height: 1.4;">
                 <strong style="color: var(--text-dark);">From Data to Insight: The Entry of AI into Life Sciences</strong><br>
-                <span style="font-size: 0.88rem; color: var(--text-muted);">Invited Speaker / Instructor &bull; Univ. of Mazandaran (2025)</span>
+                <span style="font-size: 0.88rem; color: var(--text-muted);">Invited Speaker &bull; Univ. of Mazandaran (2025)</span>
               </div>
             </li>
             <li>
