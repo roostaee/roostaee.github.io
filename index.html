@@ -93,95 +93,73 @@
       color: var(--accent);
     }
 
-    /* Hero Section */
+/* --- Hero Section Layout --- */
     .hero {
-      padding: 4rem 0 3rem;
+      padding: 5rem 0 4rem;
       background: white;
       border-bottom: 1px solid var(--border-color);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 3rem;
+      grid-template-columns: 1fr 320px; /* Swaps layout: Text takes left side, Image takes 320px on right */
+      gap: 4rem;
       align-items: center;
     }
 
-    .hero-photo img {
-      width: 270px;
-      height: 270px;
-      aspect-ratio: 1 / 1;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: top;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12);
-      border: 4px solid white;
-      outline: 1px solid var(--border-color);
+    /* --- The New Sabokrou-Style Tag & Title --- */
+    .hero-top-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #059669; /* Professional Emerald Green */
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     .hero-title {
-      font-size: 2.3rem;
+      font-size: 3.2rem; /* Massive, bold headline */
+      line-height: 1.15;
       color: var(--text-dark);
-      margin-bottom: 0.25rem;
+      margin-bottom: 1.5rem;
       font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .hero-subtitle {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      margin-bottom: 1.1rem;
-      font-weight: 500;
+      letter-spacing: -0.03em;
     }
 
     .hero-bio {
-      font-size: 1.02rem;
+      font-size: 1.05rem;
       color: var(--text-main);
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.8rem;
       line-height: 1.7;
     }
 
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
+    /* --- The New Rectangular Image --- */
+    .hero-photo img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4; /* Creates a perfect portrait rectangle */
+      border-radius: 24px; /* Soft rounded corners instead of a circle */
+      object-fit: cover;
+      object-position: top center; /* Keeps your face in frame */
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15); /* Modern, soft shadow */
+      border: none; /* Removes the thick white circle line */
+      outline: none;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 0.35rem 0.8rem;
-      border-radius: 9999px;
-      background: var(--tag-bg);
-      color: var(--tag-color);
-    }
-
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-    }
-
-    .btn-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      font-size: 0.88rem;
-      padding: 0.45rem 0.95rem;
-      border-radius: 6px;
-      background: #f1f5f9;
-      color: var(--text-dark);
-      font-weight: 500;
-      border: 1px solid var(--border-color);
-    }
-
-    .btn-link:hover {
-      background: #e2e8f0;
-      color: var(--accent);
+    /* Mobile Responsive Fix */
+    @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .hero-photo {
+        order: -1; /* Puts the image on top of the text on mobile phones */
+        max-width: 280px;
+        margin: 0 auto 2rem auto;
+      }
     }
 
     /* Sections */
@@ -571,39 +549,47 @@
     </div>
   </header>
 
-  <!-- Hero / Profile Section -->
+
+<!-- Hero / Profile Section -->
   <div class="hero" id="about">
     <div class="container">
       <div class="hero-grid">
-        <div class="hero-photo">
-          <img src="profile.jpg" alt="Dr. Meysam Roostaee" onerror="this.src='https://via.placeholder.com/210?text=Dr.+Roostaee'">
-        </div>
+        
+        <!-- TEXT CONTENT (Left Side) -->
         <div class="hero-content">
-          <h1 class="hero-title">Meysam Roostaee, Ph.D.</h1>
           
-        <div class="hero-bio">
-		  <p>
-			I am an Assistant Professor of Computer Engineering at the University of Mazandaran. My research lies at the intersection of <strong>Natural Language Processing (NLP), multimodal data analysis, and intelligent systems</strong>. I design computational methods that enable machines to comprehend complex information, uncover hidden patterns, and reason across diverse, interconnected data sources. A core dimension of my work is building <strong>trustworthy AI</strong> that remains reliable, robust, and safe when deployed in real-world, dynamic environments.
-		  </p>
-		  
-		  <p style="margin-top: 0.6rem;">
-			  My work spans rapidly evolving domains, such as social network analysis, health informatics, and software repository mining, where text, visual content, and structured contextual data offer complementary perspectives. Specifically, our group explores intelligence across rich, nonconventional modalities, including strong>medical reports and chest X-rays</strong> in clinical health informatics, <strong>source code repositories and changelogs</strong> in software intelligence, and <strong>real-time hydrological telemetry</strong> for environmental decision-making.
-		  </p>
+          <!-- The small green tag -->
+          <div class="hero-top-tag"><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Trustworthy Artificial Intelligence</div>
+          
+          <!-- The Bold Tagline -->
+          <h1 class="hero-title">Robust AI for dynamic, real-world environments.</h1>
+          
+          <!-- Your excellent 3-paragraph bio -->
+          <div class="hero-bio">
+            <p>
+              I am an Assistant Professor of Computer Engineering at the University of Mazandaran. My research lies at the intersection of <strong>Natural Language Processing (NLP), multimodal data analysis, and intelligent systems</strong>. I design computational methods that enable machines to comprehend complex information, uncover hidden patterns, and reason across diverse, interconnected data sources. A core dimension of my work is building <strong>trustworthy AI</strong> that remains reliable, robust, and safe when deployed in real-world, dynamic environments.
+            </p>
+            
+            <p style="margin-top: 0.6rem;">
+              My work spans rapidly evolving domains, such as social network analysis, health informatics, and software repository mining, where text, visual content, and structured contextual data offer complementary perspectives. Specifically, our group explores intelligence across rich, nonconventional modalities, including strong>medical reports and chest X-rays</strong> in clinical health informatics, <strong>source code repositories and changelogs</strong> in software intelligence, and <strong>real-time hydrological telemetry</strong> for environmental decision-making.
+            </p>
+          
+            <p style="margin-top: 0.6rem;">
+              I am passionate about bridging foundational methodological advances with applied real-world challenges. I actively welcome collaborations with motivated students, researchers, and industry partners who share a vision for pushing the boundaries of dependable and impactful AI.
+            </p>
+          </div>
 
-		  <p style="margin-top: 0.6rem;">
-			I am passionate about bridging foundational methodological advances with applied real-world challenges. I actively welcome collaborations with motivated students, researchers, and industry partners who share a vision for pushing the boundaries of dependable and impactful AI.
-		  </p>
-		</div>
-
+          <!-- Badges -->
           <div class="hero-badges">
             <span class="badge"><i class="fas fa-brain"></i> Trustworthy AI & LLMs</span>
+            <span class="badge"><i class="fas fa-stream"></i> Concept Drift & Stream Mining</span>
+            <span class="badge"><i class="fas fa-laptop-code"></i> Software & Code Intelligence</span>
             <span class="badge"><i class="fas fa-heartbeat"></i> Health Informatics</span>
             <span class="badge"><i class="fas fa-share-alt"></i> Social Network Analysis</span>
-            <span class="badge"><i class="fas fa-stream"></i> Concept Drift & Stream Mining</span>
-            <span class="badge"><i class="fas fa-laptop-code"></i> Software & Code Intelligence</span>            
             <span class="badge"><i class="fas fa-water"></i> Environmental AI</span>
           </div>
 
+          <!-- Action Links -->
           <div class="social-links">
             <a href="mailto:m.roostaee@umz.ac.ir" class="btn-link"><i class="fas fa-envelope"></i> Email</a>
             <a href="https://scholar.google.com/citations?hl=en&user=ukzXH7IAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="btn-link"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
@@ -613,9 +599,16 @@
             <a href="https://github.com/roostaee" target="_blank" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
           </div>
         </div>
+
+        <!-- PHOTO (Right Side) -->
+        <div class="hero-photo">
+          <img src="profile.jpg" alt="Dr. Meysam Roostaee" onerror="this.src='https://via.placeholder.com/300x400?text=Dr.+Roostaee'">
+        </div>
+
       </div>
     </div>
   </div>
+
 
   <main class="container">
 
@@ -682,7 +675,7 @@
             </p>
           </div>
           <div class="featured-footer">
-            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Information Processing & Management</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Alexandria Journal of Engineering</span>
             <div class="pub-actions">
               <a href="https://doi.org/10.1016/j.aej.2026.01.022" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
               <a href="https://physionet.org/content/mimic-cxr/2.1.0/" class="action-btn"><i class="fas fa-database"></i> Dataset</a>
