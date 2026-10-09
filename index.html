@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<!-- Academic Schema for Google Knowledge Graph & SEO -->
+  <!-- Academic Schema for Google Knowledge Graph & SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,7 +36,7 @@
     ]
   }
   </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>Dr. Meysam Roostaee | Assistant Professor of Computer Engineering</title>
   <meta name="description" content="Personal academic website of Dr. Meysam Roostaee. Research in LLMs, Trustworthy AI, Concept Drift, Healthcare Informatics, and Software Intelligence.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -63,6 +63,11 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html, body {
+      overflow-x: hidden; /* Prevents unwanted sideways wobbling on mobile */
+      width: 100%;
     }
 
     body {
@@ -109,6 +114,7 @@
       font-weight: 700;
       font-size: 1.2rem;
       color: var(--text-dark);
+      white-space: nowrap;
     }
 
     .nav-links {
@@ -127,25 +133,24 @@
       color: var(--accent);
     }
 
-    /* --- Hero Section Layout --- */
+    /* Hero Section Layout */
     .hero {
-      padding: 2.5rem 0 3.5rem; /* Reduced top padding */
+      padding: 2.5rem 0 3.5rem;
       background: white;
       border-bottom: 1px solid var(--border-color);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 270px; /* Reduced image width */
+      grid-template-columns: 1fr 270px;
       gap: 3.5rem;
       align-items: center;
     }
 
-    /* --- The New Sabokrou-Style Tag & Title --- */
     .hero-top-tag {
       font-size: 0.85rem;
       font-weight: 700;
-      color: #059669; /* Professional Emerald Green */
+      color: #059669;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 0.75rem;
@@ -155,12 +160,13 @@
     }
 
     .hero-title {
-      font-size: 2.6rem; /* Reduced from 3.2rem */
+      font-size: 2.6rem;
       line-height: 1.2;
       color: var(--text-dark);
       margin-bottom: 1.25rem;
       font-weight: 800;
       letter-spacing: -0.02em;
+      word-wrap: break-word;
     }
 
     .hero-bio {
@@ -168,15 +174,14 @@
       color: var(--text-main);
       margin-bottom: 1.8rem;
       line-height: 1.7;
-      text-align: justify; /* Justified text */
+      text-align: justify;
     }
 
-    /* --- The Rectangular Image --- */
     .hero-photo img {
       width: 100%;
       height: auto;
-      aspect-ratio: 4 / 5; /* Slightly less tall than 3/4 */
-      border-radius: 20px; /* Softer rounded corners */
+      aspect-ratio: 4 / 5;
+      border-radius: 20px;
       object-fit: cover;
       object-position: top center;
       box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
@@ -184,7 +189,7 @@
       outline: none;
     }
 
-	/* --- Badges and Links --- */
+    /* Badges and Links */
     .hero-badges {
       display: flex;
       flex-wrap: wrap;
@@ -207,20 +212,21 @@
     .social-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.35rem; /* Reduced gap between buttons */
+      gap: 0.35rem;
     }
 
     .btn-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.3rem; /* Reduced space between icon and text */
-      font-size: 0.82rem; /* Slightly smaller text */
-      padding: 0.35rem 0.65rem; /* Reduced horizontal padding */
+      gap: 0.3rem;
+      font-size: 0.82rem;
+      padding: 0.35rem 0.65rem;
       border-radius: 6px;
       background: #f1f5f9;
       color: var(--text-dark);
       font-weight: 500;
       border: 1px solid var(--border-color);
+      white-space: nowrap;
     }
 
     .btn-link:hover {
@@ -236,23 +242,6 @@
 
     .btn-primary:hover {
       background: var(--primary) !important;
-    }
-
-    /* Mobile Responsive Fix */
-    @media (max-width: 768px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-        text-align: left;
-        gap: 2.5rem;
-      }
-      .hero-photo {
-        order: -1;
-        max-width: 260px;
-        margin: 0 auto;
-      }
-      .hero-bio {
-        text-align: left; /* Better for reading on small mobile screens */
-      }
     }
 
     /* Sections */
@@ -275,7 +264,7 @@
     /* Featured Cards */
     .featured-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       margin-top: 1rem;
     }
@@ -296,21 +285,21 @@
       box-shadow: 0 8px 16px rgba(0,0,0,0.06);
     }
 
-     .featured-image {
+    .featured-image {
       width: 100%;
-      height: 205px; /* Increased from 170px so diagrams have more height */
+      height: 205px;
       background-color: #f8fafc;
       border-bottom: 1px solid var(--border-color);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.35rem; /* Reduced from 1rem to remove the wide empty borders */
+      padding: 0.35rem;
     }
 
     .featured-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; /* Automatically scales the diagram as large as possible without cutting it */
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
 
     .featured-content {
@@ -339,13 +328,12 @@
       line-height: 1.35;
     }
 
-    /* Justified text */
     .featured-desc {
       font-size: 0.92rem;
       color: var(--text-main);
       margin-bottom: 0.8rem;
       line-height: 1.6;
-      text-align: justify; /* Justifies the text edges cleanly */
+      text-align: justify;
       text-justify: inter-word;
     }
 
@@ -383,6 +371,7 @@
       margin-bottom: 1.25rem;
       border: 1px solid var(--border-color);
       transition: box-shadow 0.2s;
+      overflow-wrap: break-word;
     }
 
     .pub-card:hover {
@@ -425,7 +414,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      padding: 0.3rem 0.75rem;
+      padding: 0.35rem 0.75rem;
       font-size: 0.8rem;
       font-weight: 600;
       border-radius: 4px;
@@ -450,6 +439,7 @@
       border-radius: 6px;
       border: 1px solid var(--border-color);
       font-size: 0.9rem;
+      overflow-wrap: break-word;
     }
 
     .keyword-list {
@@ -500,6 +490,7 @@
       padding: 1rem;
       border-radius: 6px;
       white-space: pre-wrap;
+      word-break: break-all;
       overflow-x: auto;
     }
 
@@ -528,10 +519,10 @@
       margin-bottom: 0.6rem;
     }
 
-    /* Teaching Section */
+    /* Teaching & Service Grid */
     .teaching-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
 
@@ -572,7 +563,7 @@
     /* Students Section */
     .students-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1rem;
     }
 
@@ -604,6 +595,128 @@
       font-size: 0.88rem;
       color: var(--text-muted);
     }
+
+    /* ========================================================= */
+    /* COMPREHENSIVE MOBILE OPTIMIZATIONS (Screen width <= 768px) */
+    /* ========================================================= */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1rem; /* Reclaim horizontal margin space on phones */
+      }
+
+      /* Native swipeable navigation ribbon */
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        padding: 0.8rem 0;
+      }
+
+      .nav-links {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 0.9rem;
+        padding: 0.4rem 0;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Hide scrollbar Firefox */
+      }
+
+      .nav-links::-webkit-scrollbar {
+        display: none; /* Hide scrollbar Chrome/Safari */
+      }
+
+      .nav-links a {
+        font-size: 0.88rem;
+        background: #f1f5f9;
+        padding: 0.35rem 0.75rem;
+        border-radius: 20px;
+        display: inline-block;
+      }
+
+      /* Hero Mobile Layout */
+      .hero {
+        padding: 2rem 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: left;
+      }
+
+      .hero-photo {
+        order: -1; /* Picture stays on top */
+        max-width: 220px;
+        margin: 0 auto;
+      }
+
+      .hero-photo img {
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12);
+      }
+
+      .hero-top-tag {
+        font-size: 0.78rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .hero-title {
+        font-size: 1.75rem; /* Scaled down so words don't break awkwardly */
+        line-height: 1.25;
+        margin-bottom: 1rem;
+      }
+
+      .hero-bio {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        text-align: left; /* Avoid stretched justification spaces on small screens */
+        margin-bottom: 1.4rem;
+      }
+
+      /* Force all multi-column grids to clean single-column cards on phones */
+      .featured-grid,
+      .teaching-grid,
+      .students-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem;
+      }
+
+      .featured-image {
+        height: 180px;
+      }
+
+      .featured-desc {
+        text-align: left;
+      }
+
+      /* Publication Card Mobile Tweaks */
+      .pub-card {
+        padding: 1.1rem 1.1rem;
+      }
+
+      .pub-title {
+        font-size: 1.02rem;
+        line-height: 1.35;
+      }
+
+      .pub-actions {
+        gap: 0.4rem;
+      }
+
+      .action-btn {
+        padding: 0.35rem 0.65rem;
+        font-size: 0.78rem;
+      }
+
+      section {
+        padding: 2.5rem 0;
+      }
+
+      .section-title {
+        font-size: 1.35rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -627,7 +740,6 @@
     </div>
   </header>
 
-
   <!-- Hero / Profile Section -->
   <div class="hero" id="about">
     <div class="container">
@@ -635,12 +747,9 @@
         
         <!-- TEXT CONTENT (Left Side) -->
         <div class="hero-content">
-          
           <div class="hero-top-tag"><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Trustworthy Artificial Intelligence</div>
-          
           <h1 class="hero-title">Robust AI for dynamic, real-world environments.</h1>
           
-          <!-- Shorter, punchier, justified bio -->
           <div class="hero-bio">
             <p>
               I am an Assistant Professor of Computer Engineering at the University of Mazandaran. My research bridges <strong>Natural Language Processing (NLP), multimodal data analysis, and intelligent systems</strong>, focusing on building <strong>trustworthy AI</strong> that remains reliable and robust in dynamic, real-world environments.
@@ -661,7 +770,7 @@
             <span class="badge"><i class="fas fa-water"></i> Environmental AI</span>
           </div>
 
-          <!-- Action Links (Email is now a highlighted Primary button) -->
+          <!-- Action Links -->
           <div class="social-links">
             <a href="mailto:m.roostaee@umz.ac.ir" class="btn-link btn-primary"><i class="fas fa-envelope"></i> Email</a>
             <a href="https://scholar.google.com/citations?hl=en&user=ukzXH7IAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="btn-link"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
@@ -680,7 +789,6 @@
       </div>
     </div>
   </div>
-
 
   <main class="container">
 
@@ -704,8 +812,8 @@
           <div class="featured-footer">
             <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Knowledge-Based Systems, 2025</span>
             <div class="pub-actions">
-              <a href="https://doi.org/10.1016/j.knosys.2025.115247" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="https://github.com/roostaee/ConceptDriftDetection/tree/main" class="action-btn"><i class="fab fa-github"></i> Dataset</a>
+              <a href="https://doi.org/10.1016/j.knosys.2025.115247" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
+              <a href="https://github.com/roostaee/ConceptDriftDetection/tree/main" class="action-btn" target="_blank"><i class="fab fa-github"></i> Dataset</a>
             </div>
           </div>
         </div>
@@ -725,8 +833,8 @@
           <div class="featured-footer">
             <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Info. & Software Tech, 2026</span>
             <div class="pub-actions">
-              <a href="https://doi.org/10.1016/j.infsof.2026.108056" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="https://github.com/roostaee/ConceptDriftDetection/tree/main" class="action-btn"><i class="fab fa-github"></i> Dataset</a>
+              <a href="https://doi.org/10.1016/j.infsof.2026.108056" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
+              <a href="https://github.com/roostaee/ConceptDriftDetection/tree/main" class="action-btn" target="_blank"><i class="fab fa-github"></i> Dataset</a>
             </div>
           </div>
         </div>
@@ -746,8 +854,8 @@
           <div class="featured-footer">
             <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Alexandria Journal of Engineering</span>
             <div class="pub-actions">
-              <a href="https://doi.org/10.1016/j.aej.2026.01.022" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="https://physionet.org/content/mimic-cxr/2.1.0/" class="action-btn"><i class="fas fa-database"></i> Dataset</a>
+              <a href="https://doi.org/10.1016/j.aej.2026.01.022" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
+              <a href="https://physionet.org/content/mimic-cxr/2.1.0/" class="action-btn" target="_blank"><i class="fas fa-database"></i> Dataset</a>
             </div>
           </div>
         </div>
@@ -778,7 +886,7 @@
 
     <!-- Publications Section -->
     <section id="publications">
-      <h2 class="section-title"><i class="fas fa-book-open"></i>Selected Publications</h2>
+      <h2 class="section-title"><i class="fas fa-book-open"></i> Selected Publications</h2>
 
       <div class="filter-buttons">
         <button class="filter-btn active" onclick="filterPubs('all')">All</button>
@@ -796,8 +904,8 @@
           <div class="pub-authors">Z. Davoudi, <strong>M. Roostaee*</strong>, K. Aghajani</div>
           <div class="pub-venue">Informatics in Medicine Unlocked, vol. 64, 101781, 2026. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="https://doi.org/10.1016/j.imu.2026.101781" class="action-btn"><i class="fas fa-file-pdf"></i> Paper (DOI)</a>
-			<a href="Papers/1-s2.0-S2352914826000511-main.pdf" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+            <a href="https://doi.org/10.1016/j.imu.2026.101781" class="action-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Paper (DOI)</a>
+            <a href="Papers/1-s2.0-S2352914826000511-main.pdf" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
             <button class="action-btn" onclick="toggleDetails('det1')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib1')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
@@ -809,9 +917,9 @@
               <span class="keyword-pill">Knowledge-Augmented AI</span>
               <span class="keyword-pill">Large language models</span>
               <span class="keyword-pill">Social media mining</span>
-			  <span class="keyword-pill">Clinical dialogue systems</span>
-			  <span class="keyword-pill">Multimodal affective computing</span>
-			  <span class="keyword-pill">Mental Health</span>
+              <span class="keyword-pill">Clinical dialogue systems</span>
+              <span class="keyword-pill">Multimodal affective computing</span>
+              <span class="keyword-pill">Mental Health</span>
             </div>
             <p><strong>Abstract:</strong> Computational depression detection has reached a saturation point with standard end-to-end deep learning paradigms. To navigate the rapid proliferation of highly complex models, this systematic scoping review analyzes 87 primary post-LLM studies, spanning both “in-the-wild” social media and structured clinical interactions, published primarily between January 2024 and April 2026. Evaluated alongside 7 foundational 2023 baselines (totaling 94 core methodology papers out of 111 cited references), these works mark a distinct methodological transition from isolated feature engineering to multimodal and architectural synthesis. We introduce a novel taxonomy that categorizes these emerging approaches into four information fusion paradigms: (1) Architecture Fusion, which hybridizes heterogeneous neural components to capture complementary spatiotemporal dependencies; (2) Knowledge Fusion, which injects structured external clinical knowledge (e.g., DSM-5 ontologies) into neural pipelines to bridge the semantic gap; (3) Generative Fusion, which integrates in-context learning (ICL), retrieval-augmented generation (RAG), and parameter-efficient fine-tuning (PEFT); and (4) Data-Level Fusion, which addresses multimodal alignment, dynamic fusion timing, and temporal modeling. Our critical analysis reveals that while zero-shot large language models (LLMs) offer broad semantic reasoning capabilities, fine-tuned encoders and hybrid architectures integrated with domain-specific knowledge currently provide a more rigorously validated balance of reliability, explainability, and performance. We conclude by exposing the “illusion of accuracy” prevalent in proxy-labeled benchmarks and outlining strategic directions for developing clinically valid, privacy-preserving detection systems suitable for real-world clinical workflows.</p>
             <div class="pub-figure-container">
@@ -839,8 +947,8 @@ url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
           <div class="pub-authors"><strong>M. Roostaee*</strong>, M. H. Soheilian</div>
           <div class="pub-venue">Computing, 108(7), 100, 2026. [Springer]</div>
           <div class="pub-actions">
-            <a href="https://doi.org/10.1007/s00607-026-01694-1" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-			<a href="https://github.com/roostaee/ConceptDriftDetection/tree/main" class="action-btn"><i class="fas fa-file-pdf"></i> Dataset</a>
+            <a href="https://doi.org/10.1007/s00607-026-01694-1" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="https://github.com/roostaee/ConceptDriftDetection/tree/main" class="action-btn" target="_blank"><i class="fab fa-github"></i> Dataset</a>
             <button class="action-btn" onclick="toggleDetails('det2')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib2')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
@@ -850,10 +958,10 @@ url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
               <span class="keyword-pill">Concept Drift</span>
               <span class="keyword-pill">Anchor Drift</span>
               <span class="keyword-pill">Data Streams</span>
-			  <span class="keyword-pill">Unsupervised learning</span>
+              <span class="keyword-pill">Unsupervised learning</span>
               <span class="keyword-pill">Abrupt Drifts</span>
               <span class="keyword-pill">Adaptive Learning</span>
-			  <span class="keyword-pill">Autoencoder</span>
+              <span class="keyword-pill">Autoencoder</span>
             </div>
             <p><strong>Abstract:</strong> Concept drift in non-stationary data streams poses challenges to machine learning models by degrading predictive performance over time. Although unsupervised detectors resolve the practical limitation of label unavailability, many current approaches rely on fully adaptive frameworks where both the statistical reference and feature representation evolve continuously. This reliance on fluid baselines can lead to representational erosion, where the detector gradually loses its memory of the original concept, making it desensitized to significant, abrupt deviations. To address this deficiency, we propose Concept Anchor Drift Detection (CADD), a novel unsupervised framework. CADD establishes a stable semantic baseline by training a deep autoencoder a single time on an initial, trusted segment of the data stream. The resulting frozen encoder serves as a constant “Concept Anchor,” projecting all subsequent data into a fixed, semantically meaningful latent space. Drift is then detected by applying a dimension-wise Kolmogorov-Smirnov test to a sliding window of these anchored latent vectors. This design balances stability (via the fixed encoder) with plasticity (via the sliding window), preventing erosion while allowing adaptation to new valid concepts. A broad empirical evaluation on real-world and synthetic benchmarks demonstrates that CADD achieves highly competitive predictive performance, particularly excelling among single-model detectors in scenarios characterized by abrupt and significant distributional shifts. While acknowledging trade-offs in environments dominated by gradual or seasonal changes, CADD significantly outperforms adaptive baselines on abrupt drift benchmarks, validating the methodological value of a fixed representational anchor and introducing a robust, proactive tool for maintaining model reliability in evolving environments.</p>
             <div class="pub-figure-container">
@@ -883,7 +991,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
           <div class="pub-authors"><strong>M. Roostaee*</strong></div>
           <div class="pub-venue">Iranian Journal of Science and Technology, Transactions of Electrical Engineering, 2026. [Springer]</div>
           <div class="pub-actions">
-            <a href="https://doi.org/10.1007/s40998-026-01073-8" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="https://doi.org/10.1007/s40998-026-01073-8" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
             <button class="action-btn" onclick="toggleDetails('det3')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib3')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
@@ -893,11 +1001,11 @@ url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
               <span class="keyword-pill">Large Language Models</span>
               <span class="keyword-pill">Cold-Start Problem</span>
               <span class="keyword-pill">Augmented review generation</span>
-			  <span class="keyword-pill">Semantic retrieval</span>
-			  <span class="keyword-pill">Aspect-based segmentation</span>
-			  <span class="keyword-pill">Prompt engineering</span>
+              <span class="keyword-pill">Semantic retrieval</span>
+              <span class="keyword-pill">Aspect-based segmentation</span>
+              <span class="keyword-pill">Prompt engineering</span>
               <span class="keyword-pill">Feedback Systems</span>
-			  <span class="keyword-pill">Synthetic Data Generation</span>
+              <span class="keyword-pill">Synthetic Data Generation</span>
             </div>
             <p><strong>Abstract:</strong> E-commerce platforms face the challenge of the “cold-start” problem, where new products lack user reviews crucial for buyer decisions. This paper introduces a novel Large Language Model (LLM)-driven approach for generating high-quality augmented reviews for cold-start products by utilizing reviews from semantically similar “warm” products. The proposed method follows a two-stage framework: Initially, an advanced semantic retrieval mechanism is deployed, enhanced through a data-driven attribute weighting strategy. This attribute weighting is derived via a zero-shot aspect-based segmentation technique, guided by a strategically engineered prompting approach to optimize attribute weights. This initial stage ensures the precise extraction of semantically relevant warm product reviews. Subsequently, in the second stage, these retrieved segments are refined, filtering out irrelevant content to maximize alignment with the cold product’s characteristics. Evaluated on two comprehensive datasets from CNET.com (Digital Cameras and MP3 Players), the method demonstrates a substantial average improvement of 65% in ROUGE score metrics compared to traditional baseline approaches (e.g., Query Likelihood) across varying review lengths. Furthermore, it achieves superior performance compared to the state-of-the-art embedding-based method, attaining a ROUGE-2 F1-score of 0.093 on Digital Cameras and 0.113 on MP3 Players (representing improvements of approximately 3%). By enhancing the informativeness and reliability of generated reviews, this work presents a significant step forward in mitigating the cold-start problem, enhancing the online e-commerce experience for both buyers and sellers.</p>
           </div>
@@ -920,26 +1028,24 @@ url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
           <div class="pub-authors">H. Katal, J. Ghasemi*, <strong>M. Roostaee</strong></div>
           <div class="pub-venue">Alexandria Engineering Journal, vol. 137, pp. 505-520, 2026. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="https://doi.org/10.1007/s40998-026-01073-8" class="action-btn"><i class="fas fa-file-pdf"></i> Paper (DOI)</a>
-			<a href="Papers/1-s2.0-S1110016826000402-main.pdf" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-			<a href="https://physionet.org/content/mimic-cxr/2.1.0/" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> Dataset</a>
+            <a href="https://doi.org/10.1016/j.aej.2026.01.022" class="action-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Paper (DOI)</a>
+            <a href="Papers/1-s2.0-S1110016826000402-main.pdf" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+            <a href="https://physionet.org/content/mimic-cxr/2.1.0/" class="action-btn" target="_blank"><i class="fas fa-database"></i> Dataset</a>
             <button class="action-btn" onclick="toggleDetails('det4')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib4')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
-            
-			
 
           <div id="det4" class="pub-details">
             <div class="keyword-list">
               <span class="keyword-pill">Clinical NLP</span>
               <span class="keyword-pill">Chest X-Ray Reports</span>
               <span class="keyword-pill">Zero-Shot learning</span>
-			  <span class="keyword-pill">Large language models</span>
+              <span class="keyword-pill">Large language models</span>
               <span class="keyword-pill">Prompt Engineering</span>
               <span class="keyword-pill">MIMIC-CXR dataset</span>
-			  <span class="keyword-pill">Zero-shot Classification</span>
-			  <span class="keyword-pill">LLMs</span>
-			  <span class="keyword-pill">In-context learning</span>
+              <span class="keyword-pill">Zero-shot Classification</span>
+              <span class="keyword-pill">LLMs</span>
+              <span class="keyword-pill">In-context learning</span>
             </div>
             <p><strong>Abstract:</strong> Accurately extracting structured clinical labels from unstructured chest radiology reports, particularly the MIMIC-CXR dataset, is critical for robust Clinical Decision Support Systems. However, conventional supervised deep learning faces major challenges: reliance on expert-annotated datasets, which are costly and time-consuming to curate, and the computational overhead of training or fine-tuning complex models. To circumvent these limitations, this study proposes a Prompt based Zero Shot Learning Framework that leverages the semantic reasoning capabilities of pre trained LLM to classify radiology reports without requiring gradient-based training or labeled data. We systematically investigate the impact of various text preprocessing pipelines and prompt engineering strategies, including task specific prompts, Persona based instructions, Chain of Thought reasoning, and Ensemble Prompting, alongside mechanisms for managing label uncertainty. Experimental results demonstrate that the optimal configuration, utilizing the IMPRESSION section of reports with specific uncertainty handling, achieves a weighted average F1 score of 0.85 and an Area Under the Curve of 0.92. These results significantly outperform traditional rule based labelers and unsupervised baselines in the domain of clinical text classification. This study substantiates the potential of NLP and prompt engineering to automate medical report structuring, offering a scalable and label free alternative to traditional supervised learning for healthcare applications.</p>
           </div>
@@ -963,50 +1069,30 @@ url = {https://www.sciencedirect.com/science/article/pii/S1110016826000402}
           <div class="pub-authors"><strong>M. Roostaee*</strong>, S. M. Fakhrahmad, M. H. Sadreddini</div>
           <div class="pub-venue">Information and Software Technology, 108056, 2026. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="https://doi.org/10.1016/j.infsof.2026.108056" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-			<a href="https://github.com/roostaee/ConceptDriftDetection/tree/main" class="action-btn"><i class="fas fa-file-pdf"></i> Dataset</a>
+            <a href="https://doi.org/10.1016/j.infsof.2026.108056" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="https://github.com/roostaee/ConceptDriftDetection/tree/main" class="action-btn" target="_blank"><i class="fab fa-github"></i> Dataset</a>
             <button class="action-btn" onclick="toggleDetails('det5')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib5')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
 
           <div id="det5" class="pub-details">
             <div class="keyword-list">
-				<span class="keyword-pill">App Review Analysis</span>
-				<span class="keyword-pill">Contrastive learning</span>
-				<span class="keyword-pill">Classification-by-retrieval</span>
-				<span class="keyword-pill">Interpretability</span>
-				<span class="keyword-pill">Software maintenance</span>
-				<span class="keyword-pill">Bug Classification</span>
-				<span class="keyword-pill">Knowledge Retrieval</span>
-				<span class="keyword-pill">Software Repository Mining</span>
+              <span class="keyword-pill">App Review Analysis</span>
+              <span class="keyword-pill">Contrastive learning</span>
+              <span class="keyword-pill">Classification-by-retrieval</span>
+              <span class="keyword-pill">Interpretability</span>
+              <span class="keyword-pill">Software maintenance</span>
+              <span class="keyword-pill">Bug Classification</span>
+              <span class="keyword-pill">Knowledge Retrieval</span>
+              <span class="keyword-pill">Software Repository Mining</span>
             </div>
-			<p><strong>Abstract</strong></p>
-
-			<p>
-				<strong>Context:</strong>
-				Accurate and timely identification of software defects from user-generated app reviews is crucial for efficient software maintenance. However, automated classifiers face challenges with the volume and heterogeneity of review text, often struggling with generalization, decision transparency, and learning from limited labeled examples per bug category.
-			</p>
-
-			<p>
-				<strong>Objective:</strong>
-				This paper introduces CONKER (CONtrastive Knowledge Enhanced Retrieval), a novel framework to address these issues by improving accuracy and providing inherent interpretability for multi-class app review bug classification.
-			</p>
-
-			<p>
-				<strong>Methods:</strong>
-				CONKER employs a two-stage process. First, a transformer-based sentence encoder is fine-tuned using supervised contrastive learning (Multiple Negatives Ranking Loss) on the MABLE benchmark to create a discriminative embedding space. Second, a classification-by-retrieval mechanism assigns labels by matching new reviews against curated class-specific exemplars. The framework is evaluated using 10-fold cross-validation, an ablation study, and a human-in-the-loop study with professional developers.
-			</p>
-
-			<p>
-				<strong>Results:</strong>
-				On the MABLE dataset, CONKER achieves a new state-of-the-art weighted F1-score of 0.8133. Critically, it also attains a Macro F1-score over 13 percentage points higher than the strongest baseline, demonstrating superior performance on minority classes. A new zero-shot experiment provides quantitative evidence of its strong cross-platform generalization, where CONKER outperforms a RoBERTa baseline by 10.1 percentage points on a developer-annotated Apple App Store dataset. This is complemented by a human-in-the-loop study that validated the practical utility of CONKER's exemplar-based explanations. Ablation studies confirm that both the contrastive fine-tuning and the per-class retrieval architecture are fundamental to this multi-faceted success.
-			</p>
-
-			<p>
-				<strong>Conclusion:</strong>
-				Contrastive learning-driven retrieval is a scalable, interpretable, and high-fidelity approach for nuanced text categorization in empirical software engineering. The CONKER framework demonstrates that by engineering a task-specific semantic space, it is possible to reconcile high predictive accuracy with the transparency required for practical software maintenance workflows.
-			</p>
-		</div>
+            <p><strong>Abstract</strong></p>
+            <p><strong>Context:</strong> Accurate and timely identification of software defects from user-generated app reviews is crucial for efficient software maintenance. However, automated classifiers face challenges with the volume and heterogeneity of review text, often struggling with generalization, decision transparency, and learning from limited labeled examples per bug category.</p>
+            <p><strong>Objective:</strong> This paper introduces CONKER (CONtrastive Knowledge Enhanced Retrieval), a novel framework to address these issues by improving accuracy and providing inherent interpretability for multi-class app review bug classification.</p>
+            <p><strong>Methods:</strong> CONKER employs a two-stage process. First, a transformer-based sentence encoder is fine-tuned using supervised contrastive learning (Multiple Negatives Ranking Loss) on the MABLE benchmark to create a discriminative embedding space. Second, a classification-by-retrieval mechanism assigns labels by matching new reviews against curated class-specific exemplars. The framework is evaluated using 10-fold cross-validation, an ablation study, and a human-in-the-loop study with professional developers.</p>
+            <p><strong>Results:</strong> On the MABLE dataset, CONKER achieves a new state-of-the-art weighted F1-score of 0.8133. Critically, it also attains a Macro F1-score over 13 percentage points higher than the strongest baseline, demonstrating superior performance on minority classes. A new zero-shot experiment provides quantitative evidence of its strong cross-platform generalization, where CONKER outperforms a RoBERTa baseline by 10.1 percentage points on a developer-annotated Apple App Store dataset. This is complemented by a human-in-the-loop study that validated the practical utility of CONKER's exemplar-based explanations. Ablation studies confirm that both the contrastive fine-tuning and the per-class retrieval architecture are fundamental to this multi-faceted success.</p>
+            <p><strong>Conclusion:</strong> Contrastive learning-driven retrieval is a scalable, interpretable, and high-fidelity approach for nuanced text categorization in empirical software engineering. The CONKER framework demonstrates that by engineering a task-specific semantic space, it is possible to reconcile high predictive accuracy with the transparency required for practical software maintenance workflows.</p>
+          </div>
 
           <div id="bib5" class="bibtex-box">@article{ROOSTAEE2026108056,
   title = {CONKER: CONtrastive knowledge enhanced retrieval for app review bug classification},
@@ -1027,21 +1113,20 @@ url = {https://www.sciencedirect.com/science/article/pii/S0950584926000455}
           <div class="pub-authors"><strong>M. Roostaee*</strong>, M. H. Soheilian</div>
           <div class="pub-venue">Knowledge-Based Systems, 115247, 2025. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="https://doi.org/10.1016/j.knosys.2025.115247" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-			<a href="https://github.com/roostaee/ConceptDriftDetection/tree/main" class="action-btn"><i class="fas fa-file-pdf"></i> Dataset</a>
+            <a href="https://doi.org/10.1016/j.knosys.2025.115247" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="https://github.com/roostaee/ConceptDriftDetection/tree/main" class="action-btn" target="_blank"><i class="fab fa-github"></i> Dataset</a>
             <button class="action-btn" onclick="toggleDetails('det6')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib6')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
 
           <div id="det6" class="pub-details">
             <div class="keyword-list">
-				<span class="keyword-pill">Concept drift</span>
-			  <span class="keyword-pill">Data stream mining</span>
-			  <span class="keyword-pill">Unsupervised learning</span>
-			  <span class="keyword-pill">Data stream mining</span>
+              <span class="keyword-pill">Concept drift</span>
+              <span class="keyword-pill">Data stream mining</span>
+              <span class="keyword-pill">Unsupervised learning</span>
               <span class="keyword-pill">Residual Analysis</span>
-			  <span class="keyword-pill">Statistical process control</span>
-			  <span class="keyword-pill">Streaming Data</span>
+              <span class="keyword-pill">Statistical process control</span>
+              <span class="keyword-pill">Streaming Data</span>
               <span class="keyword-pill">Unsupervised Drift Detection</span>
               <span class="keyword-pill">Intelligent Systems</span>
             </div>
@@ -1061,7 +1146,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S0950705125022816}
 }</div>
         </div>
 
-<!-- IJE 2024 Paper -->
+        <!-- IJE 2024 Paper -->
         <div class="pub-card" data-category="ir nlp">
           <div class="pub-title">Language-independent Profile-based Tag Recommendation for Community Question Answering Systems</div>
           <div class="pub-authors"><strong>M. Roostaee*</strong></div>
@@ -1073,8 +1158,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S0950705125022816}
             <button class="action-btn" onclick="toggleDetails('det_ije2024')"><i class="fas fa-info-circle"></i> Abstract & Architecture</button>
             <button class="action-btn" onclick="toggleBib('bib_ije2024')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
-		  
-          <!-- Collapsible Abstract & Graphical Abstract -->
+          
           <div id="det_ije2024" class="pub-details">
             <div class="keyword-list">
               <span class="keyword-pill">Tag Recommendation</span>
@@ -1087,13 +1171,11 @@ url = {https://www.sciencedirect.com/science/article/pii/S0950705125022816}
             <p><strong>Abstract:</strong> Community question-answering (CQA) systems are helpful for knowledge sharing. However, they can become difficult to manage as the number of questions and answers increases. Effective tag recommendation facilitates the discovery of relevant material, yet prevailing methods typically depend on language-specific resources or necessitate sophisticated Natural Language Processing (NLP) tools, rendering them unsuitable for less-resourced languages. This paper introduces a novel profile-based tag recommendation strategy that transcends language and structural barriers. The approach leverages raw text data without the need for complex text mining tools. By constructing distinct profiles for each tag from key terms in associated questions, the method enables a nuanced content association. An adaptation of the Term Frequency-Inverse Document Frequency (TF-IDF) metric is proposed to calculate similarity and recommend tags aligned with these profiles. The efficacy of this approach is validated across datasets in both English and Persian, showcasing comparable to or superior recall rates against baseline models and contemporary advanced systems. This methodology is straightforward to implement, offering a valuable tool for enhancing content accessibility in CQA platforms, particularly for low-resource languages.</p>
             
             <div class="pub-figure-container">
-              <!-- Crop the Graphical Abstract flowchart from Page 1 and save as images/papers/tag-rec-architecture.png -->
               <img src="images/papers/tag-rec-architecture.png" alt="Tag Recommendation Architecture" onerror="this.parentElement.style.display='none'">
               <div class="pub-figure-caption">Figure: Pipeline of offline tag-profile generation and online profile-based tag recommendation.</div>
             </div>
           </div>
-		  	  
-          <!-- Collapsible BibTeX -->
+          
           <div id="bib_ije2024" class="bibtex-box">@article{roostaee2024language,
   title={Language-independent Profile-based Tag Recommendation for Community Question Answering Systems},
   author={Roostaee, Meysam},
@@ -1109,7 +1191,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S0950705125022816}
 }</div>
         </div>
 
-<!-- JAIDM 2023 Paper -->
+        <!-- JAIDM 2023 Paper -->
         <div class="pub-card" data-category="health">
           <div class="pub-title">Hidden Pattern Discovery on Clinical Data: an Approach based on Data Mining Techniques</div>
           <div class="pub-authors"><strong>M. Roostaee*</strong>, R. Meidanshahi</div>
@@ -1121,8 +1203,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S0950705125022816}
             <button class="action-btn" onclick="toggleDetails('det_jaidm2023')"><i class="fas fa-info-circle"></i> Abstract & Workflow</button>
             <button class="action-btn" onclick="toggleBib('bib_jaidm2023')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
-		  
-          <!-- Collapsible Abstract & Clinical Workflow -->
+          
           <div id="det_jaidm2023" class="pub-details">
             <div class="keyword-list">
               <span class="keyword-pill">Clinical Data</span>
@@ -1135,13 +1216,11 @@ url = {https://www.sciencedirect.com/science/article/pii/S0950705125022816}
             <p><strong>Abstract:</strong> In this study, we sought to minimize the need for redundant blood tests in diagnosing common diseases by leveraging unsupervised data mining techniques on a large-scale dataset of over one million patients' blood test results. We excluded non-numeric and subjective data to ensure precision. In order to identify relationships between attributes, we applied a suite of unsupervised methods including preprocessing, clustering, and association rule mining. Our approach uncovered correlations that enable healthcare professionals to detect potential acute diseases early, improving patient outcomes, and reducing costs. The reliability of our extracted patterns also suggests that this approach can lead to significant time and cost savings while reducing the workload for laboratory personnel. Our study highlights the importance of big data analytics and unsupervised learning techniques in increasing efficiency in healthcare centers.</p>
             
             <div class="pub-figure-container">
-              <!-- Crop Figure 1 from Page 3 and save as images/papers/clinical-pattern-workflow.png -->
               <img src="images/papers/clinical-pattern-workflow.png" alt="Clinical Workflow Diagram" onerror="this.parentElement.style.display='none'">
               <div class="pub-figure-caption">Figure: Overall unsupervised workflow for clinical blood biomarker pattern discovery.</div>
             </div>
           </div>
-		  	  
-          <!-- Collapsible BibTeX -->
+          
           <div id="bib_jaidm2023" class="bibtex-box">@article{roostaee2023hidden,
   title={Hidden Pattern Discovery on Clinical Data: an Approach based on Data Mining Techniques},
   author={Roostaee, Meysam and Meidanshahi, Razieh},
@@ -1157,7 +1236,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S0950705125022816}
 }</div>
         </div>
 
- <!-- Pub 7 -->
+        <!-- Pub 7 -->
         <div class="pub-card" data-category="IR">
           <div class="pub-title">An effective approach to candidate retrieval for cross-language plagiarism detection</div>
           <div class="pub-authors"><strong>M. Roostaee*</strong>, M. H. Sadreddini, S. M. Fakhrahmad*</div>
@@ -1165,11 +1244,10 @@ url = {https://www.sciencedirect.com/science/article/pii/S0950705125022816}
           
           <div class="pub-actions">
             <a href="https://doi.org/10.1016/j.ipm.2019.102150" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
-            <!-- ADDED THIS BUTTON BELOW: -->
             <button class="action-btn" onclick="toggleDetails('det7')"><i class="fas fa-info-circle"></i> Abstract</button>
             <button class="action-btn" onclick="toggleBib('bib7')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
-		  
+          
           <div id="det7" class="pub-details">
             <div class="keyword-list">
               <span class="keyword-pill">Plagiarism detection</span>
@@ -1180,7 +1258,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S0950705125022816}
             </div>
             <p><strong>Abstract:</strong> Due to the rapid growth of documents and manuscripts in various languages all over the world, plagiarism detection has become a challenging task, especially for cross lingual cases. Because of this issue, in today's plagiarism detection systems, a candidate retrieval process is developed as the first step, in order to reduce the set of documents for comparison to a reasonable number. The performance of the second step of plagiarism detection, which is devoted to a detailed analysis of the candidates is tightly dependent on the candidate retrieval phase. Regarding its high importance, the present study focuses on the candidate retrieval task and aims to extract the minimal set of highly potential source documents, accurately. The paper proposes a fusion of concept-based and keyword-based retrieval models for this purpose. A dynamic interpolation factor is used in the proposed scheme in order to combine the results of conceptual and bag-of-words models. The effectiveness of the proposed model for cross language candidate retrieval is also compared with state-of-the-art models over German-English and Spanish-English language partitions. The results show that the proposed candidate retrieval model outperforms the state-of-the-art models and can be considered as a proper choice to be embedded in cross-language plagiarism detection systems.</p>
           </div>
-		  	  
+          
           <div id="bib7" class="bibtex-box">@article{ROOSTAEE2020102150,
 title = {An effective approach to candidate retrieval for cross-language plagiarism detection: A fusion of conceptual and keyword-based schemes},
 author = {Meysam Roostaee and Mohammad Hadi Sadreddini and Seyed Mostafa Fakhrahmad},
@@ -1201,24 +1279,23 @@ url = {https://www.sciencedirect.com/science/article/pii/S0306457318310148}
           <div class="pub-authors">M. Roostaee, S. M. Fakhrahmad*, M. H. Sadreddini</div>
           <div class="pub-venue">Expert Systems with Applications, 160, 113718, 2020. [Elsevier]</div>
           <div class="pub-actions">
-		  <a href="https://doi.org/10.1016/j.eswa.2020.113718" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-		  <button class="action-btn" onclick="toggleDetails('det8')"><i class="fas fa-info-circle"></i> Abstract</button>
-		  <button class="action-btn" onclick="toggleBib('bib8')"><i class="fas fa-quote-right"></i> BibTeX</button>
+            <a href="https://doi.org/10.1016/j.eswa.2020.113718" class="action-btn" target="_blank"><i class="fas fa-file-pdf"></i> Paper</a>
+            <button class="action-btn" onclick="toggleDetails('det8')"><i class="fas fa-info-circle"></i> Abstract</button>
+            <button class="action-btn" onclick="toggleBib('bib8')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
-		  
-		  
-		  <div id="det8" class="pub-details">
+          
+          <div id="det8" class="pub-details">
             <div class="keyword-list">
-				<span class="keyword-pill">Plagiarism detection</span>
-			  <span class="keyword-pill">Cross-language plagiarism</span>
-			  <span class="keyword-pill">Text alignment</span>
-			  <span class="keyword-pill">Graph-of-words representation</span>
+              <span class="keyword-pill">Plagiarism detection</span>
+              <span class="keyword-pill">Cross-language plagiarism</span>
+              <span class="keyword-pill">Text alignment</span>
+              <span class="keyword-pill">Graph-of-words representation</span>
               <span class="keyword-pill">Multilingual word embeddings</span>	
-			  <span class="keyword-pill">Detailed Analysis</span>	
+              <span class="keyword-pill">Detailed Analysis</span>	
             </div>
             <p><strong>Abstract:</strong> The exponential growth of documents in various languages throughout the web, along with the availability of several editing and translation tools have made the cross-language plagiarism detection a challenging issue. Regarding its high importance, the present study focuses on the task of cross-language text alignment also known as detailed analysis which works on the outputs of the source retrieval step of cross-language plagiarism detection systems. The paper proposes a two-level matching approach with the aim of considering both syntactic and semantic information to align plagiarism fragments from the source and suspicious documents, accurately. At the first level, a vector space model which employs a multilingual word embeddings based dictionary and a local weighting technique is used in order to extract a minimal set of highly potential candidate fragment pairs rather than considering all possible pairs of fragments. This step also contains a dynamic expansion technique to cover more candidate pairs aiming at improving the system’s recall. It is followed by a more precise algorithm that examines the candidate pairs at the sentence level using a graph-of-words representation of text. As a result, by modelling both the words and their relationships, an acceptable increase in the system’s precision which is the goal of the second level is also observed. To identify evidence of plagiarism, i.e. potential cases of unauthorized text reuse, the algorithm tries to find maximum cliques from the match graph of source and suspicious texts. With this two-level investigation, the approach is capable to discriminate true plagiarism cases from the original text. The experimental results on different datasets such as PAN-PC-11, PAN-PC-12, and SemEval-2017 show that the proposed cross-language text alignment approach significantly outperforms the state-of-the-art models and can be fed into an expert system for further improvement of cross-language plagiarism detection. The source codes are publicly available on GitHub1, for the purposes of reproducible research.</p>
           </div>
-		  
+          
           <div id="bib8" class="bibtex-box">@article{ROOSTAEE2020113718,
 title = {Cross-language text alignment: A proposed two-level matching scheme for plagiarism detection},
 author = {Meysam Roostaee and Seyed Mostafa Fakhrahmad and Mohammad Hadi Sadreddini},
@@ -1257,7 +1334,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S095741742030542X}
             <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Operating Systems</li>
             <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Multimedia Systems</li>
             <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Discrete Mathematics</li>
-			<li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Data Mining</li>
+            <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Data Mining</li>
             <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Compiler Design</li>
             <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Theory of Languages and Automata</li>
             <li><i class="fas fa-angle-right" style="color:var(--accent);"></i> Database Systems</li>
@@ -1272,12 +1349,12 @@ url = {https://www.sciencedirect.com/science/article/pii/S095741742030542X}
     <section id="students">
       <h2 class="section-title"><i class="fas fa-user-graduate"></i> Graduate Thesis Supervision</h2>
       <div class="students-grid">
-		<div class="student-item">
+        <div class="student-item">
           <div class="student-thesis">Optimizing clinical NLP models based on zero-shot learning</div>
           <div class="student-name">Student: <strong>Hassan Katal</strong> (2025)</div>
         </div>
-		
-		<div class="student-item">
+        
+        <div class="student-item">
           <div class="student-thesis">Lung cancer classification using attention pyramid networks</div>
           <div class="student-name">Student: <strong>Riam Rashid Fashakh</strong> (2025)</div>
         </div>
@@ -1286,8 +1363,8 @@ url = {https://www.sciencedirect.com/science/article/pii/S095741742030542X}
           <div class="student-thesis">Biomedical relation extraction via advanced text mining</div>
           <div class="student-name">Student: <strong>Maedeh Moradifar</strong> (2026)</div>
         </div>
-		
-		<div class="student-item">
+        
+        <div class="student-item">
           <div class="student-thesis">Reversible Natural Language Watermarking: Solving Context Contamination</div>
           <div class="student-name">Student: <strong>Seyedeh Fatemeh Homayouni</strong> (2026)</div>
         </div>
@@ -1297,36 +1374,34 @@ url = {https://www.sciencedirect.com/science/article/pii/S095741742030542X}
           <div class="student-name">Student: <strong>Fatemeh Shirzad</strong> (2026)</div>
         </div>
 
-		<div class="student-item">
-		  <div class="student-thesis">A context-aware approach for detecting misogynous content</div>
-		  <div class="student-name">Student: <strong>Zahra Davoudi</strong> (2026)</div>
-		</div>
+        <div class="student-item">
+          <div class="student-thesis">A context-aware approach for detecting misogynous content</div>
+          <div class="student-name">Student: <strong>Zahra Davoudi</strong> (2026)</div>
+        </div>
 
         <div class="student-item">
           <div class="student-thesis">Computational model for depression assessment based on user-generated content</div>
           <div class="student-name">Student: <strong>Zeinab Davoudi</strong> (2026)</div>
         </div>
 
-		<div class="student-item">
-		  <div class="student-thesis">A semantic approach for analyzing changelogs in software repositories</div>
-		  <div class="student-name">Student: <strong>Milad Pour Yazadani</strong> (2026)</div>
-		</div>
+        <div class="student-item">
+          <div class="student-thesis">A semantic approach for analyzing changelogs in software repositories</div>
+          <div class="student-name">Student: <strong>Milad Pour Yazadani</strong> (2026)</div>
+        </div>
 
-		<div class="student-item">
+        <div class="student-item">
           <div class="student-thesis">Sarcastic content detection by modeling semantic-emotional inconsistencies</div>
           <div class="student-name">Student: <strong>Parvin Akbari</strong> (2026)</div>
         </div>
-		
-		<div class="student-item">
-		  <div class="student-thesis">Enhancing Conceptual Design in Architecture through Semantic Alignment of Multimodal Data </div>
-		  <div class="student-name">Student: <strong>Xahra Rouhinia</strong> (2026)</div>
-		</div>
-		
+        
+        <div class="student-item">
+          <div class="student-thesis">Enhancing Conceptual Design in Architecture through Semantic Alignment of Multimodal Data </div>
+          <div class="student-name">Student: <strong>Xahra Rouhinia</strong> (2026)</div>
+        </div>
       </div>
     </section>
 
-    <!-- Professional Service -->
-<!-- Service, Leadership & Talks -->
+    <!-- Leadership, Talks & Academic Service -->
     <section id="service">
       <h2 class="section-title"><i class="fas fa-hands-helping"></i> Leadership, Talks & Academic Service</h2>
       
@@ -1368,7 +1443,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S095741742030542X}
           <div class="teaching-level"><i class="fas fa-shield-alt"></i> Editorial & Peer Review</div>
           <p style="font-size: 0.92rem; margin-bottom: 1.2rem; color: var(--text-main);">Serving as an active reviewer for high-impact international journals:</p>
           <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-			<span class="badge"><i class="fas fa-shield-alt"></i> IEEE Trans. on Neural Networks and Learning Systems</span>
+            <span class="badge" style="background:#e0e7ff; color:#3730a3;"><i class="fas fa-award"></i> IEEE Trans. on Neural Networks and Learning Systems (TNNLS)</span>
             <span class="badge"><i class="fas fa-shield-alt"></i> Information Processing and Management (Elsevier)</span>
             <span class="badge"><i class="fas fa-shield-alt"></i> Expert Systems with Applications (Elsevier)</span>
             <span class="badge"><i class="fas fa-shield-alt"></i> IEEE Journal of Biomedical and Health Informatics</span>
@@ -1423,7 +1498,7 @@ url = {https://www.sciencedirect.com/science/article/pii/S095741742030542X}
 
       const cards = document.querySelectorAll('.pub-card');
       cards.forEach(card => {
-        if (cat === 'all' || card.getAttribute('data-category').includes(cat)) {
+        if (cat === 'all' || card.getAttribute('data-category').toLowerCase().includes(cat.toLowerCase())) {
           card.style.display = 'block';
         } else {
           card.style.display = 'none';
