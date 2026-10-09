@@ -762,7 +762,7 @@
           <div class="pub-authors">Z. Davoudi, <strong>M. Roostaee*</strong>, K. Aghajani</div>
           <div class="pub-venue">Informatics in Medicine Unlocked, vol. 64, 101781, 2026. [Elsevier]</div>
           <div class="pub-actions">
-            <a href="papers/1-s2.0-S2352914826000511-main.pdf" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="Papers/1-s2.0-S2352914826000511-main.pdf" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
             <button class="action-btn" onclick="toggleDetails('det1')"><i class="fas fa-info-circle"></i> Abstract & Architecture</button>
             <button class="action-btn" onclick="toggleBib('bib1')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
@@ -787,15 +787,15 @@
 
           <div id="bib1" class="bibtex-box">@article{DAVOUDI2026101781,
 title = {From ensembles to knowledge-augmented reasoning: Information fusion for depression detection in the generative AI era},
+author = {Zeynab Davoudi and Meysam Roostaee and Khadijeh Aghajani},
 journal = {Informatics in Medicine Unlocked},
 volume = {64},
 pages = {101781},
 year = {2026},
 issn = {2352-9148},
-doi = {https://doi.org/10.1016/j.imu.2026.101781},
-url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511},
-author = {Zeynab Davoudi and Meysam Roostaee and Khadijeh Aghajani},
-keywords = {Depression detection, Information fusion, Knowledge-augmented AI, Large language models, Social media mining, Clinical dialogue systems, Multimodal affective computing}
+doi = {10.1016/j.imu.2026.101781},
+url = {https://www.sciencedirect.com/science/article/pii/S2352914826000511}
+
 }</div>
         </div>
 
@@ -805,7 +805,7 @@ keywords = {Depression detection, Information fusion, Knowledge-augmented AI, La
           <div class="pub-authors"><strong>M. Roostaee*</strong>, M. H. Soheilian</div>
           <div class="pub-venue">Computing, 108(7), 100, 2026. [Springer]</div>
           <div class="pub-actions">
-            <a href="#" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="https://doi.org/10.1007/s00607-026-01694-1" class="action-btn"><i class="fas fa-file-pdf"></i> Paper</a>
             <button class="action-btn" onclick="toggleDetails('det2')"><i class="fas fa-info-circle"></i> Abstract & Architecture</button>
             <button class="action-btn" onclick="toggleBib('bib2')"><i class="fas fa-quote-right"></i> BibTeX</button>
           </div>
@@ -815,10 +815,12 @@ keywords = {Depression detection, Information fusion, Knowledge-augmented AI, La
               <span class="keyword-pill">Concept Drift</span>
               <span class="keyword-pill">Anchor Drift</span>
               <span class="keyword-pill">Data Streams</span>
+			  <span class="keyword-pill">Unsupervised learning</span>
               <span class="keyword-pill">Abrupt Drifts</span>
               <span class="keyword-pill">Adaptive Learning</span>
+			  <span class="keyword-pill">Autoencoder</span>
             </div>
-            <p><strong>Abstract:</strong> Detecting sudden distributional shifts in high-throughput streaming environments is vital for autonomous AI. We propose Concept Anchor Drift Detection (CADD), establishing dynamic reference anchors to proactively register abrupt drifts with minimal false alarms and low latency.</p>
+            <p><strong>Abstract:</strong>Concept drift in non-stationary data streams poses challenges to machine learning models by degrading predictive performance over time. Although unsupervised detectors resolve the practical limitation of label unavailability, many current approaches rely on fully adaptive frameworks where both the statistical reference and feature representation evolve continuously. This reliance on fluid baselines can lead to representational erosion, where the detector gradually loses its memory of the original concept, making it desensitized to significant, abrupt deviations. To address this deficiency, we propose Concept Anchor Drift Detection (CADD), a novel unsupervised framework. CADD establishes a stable semantic baseline by training a deep autoencoder a single time on an initial, trusted segment of the data stream. The resulting frozen encoder serves as a constant “Concept Anchor,” projecting all subsequent data into a fixed, semantically meaningful latent space. Drift is then detected by applying a dimension-wise Kolmogorov-Smirnov test to a sliding window of these anchored latent vectors. This design balances stability (via the fixed encoder) with plasticity (via the sliding window), preventing erosion while allowing adaptation to new valid concepts. A broad empirical evaluation on real-world and synthetic benchmarks demonstrates that CADD achieves highly competitive predictive performance, particularly excelling among single-model detectors in scenarios characterized by abrupt and significant distributional shifts. While acknowledging trade-offs in environments dominated by gradual or seasonal changes, CADD significantly outperforms adaptive baselines on abrupt drift benchmarks, validating the methodological value of a fixed representational anchor and introducing a robust, proactive tool for maintaining model reliability in evolving environments.</p>
             <div class="pub-figure-container">
               <img src="images/papers/cadd-arch.png" alt="CADD Architecture" onerror="this.parentElement.style.display='none'">
               <div class="pub-figure-caption">Figure: Concept anchor tracking workflow across dynamic stream windows.</div>
@@ -826,14 +828,17 @@ keywords = {Depression detection, Information fusion, Knowledge-augmented AI, La
           </div>
 
           <div id="bib2" class="bibtex-box">@article{roostaee2026concept,
-  title={Concept anchor drift detection: a framework for proactive detection of abrupt drifts in real-world data streams},
-  author={Roostaee, Meysam and Soheilian, M. H.},
-  journal={Computing},
-  volume={108},
-  number={7},
-  pages={100},
-  year={2026},
-  publisher={Springer}
+  title   = {Concept Anchor Drift Detection: A Framework for Proactive Detection of Abrupt Drifts in Real-World Data Streams},
+  author  = {Roostaee, Meysam and Soheilian, Mohammad Hosein},
+  journal = {Computing},
+  year    = {2026},
+  volume  = {108},
+  number  = {7},
+  pages   = {100},
+  month   = jun,
+  doi     = {10.1007/s00607-026-01694-1},
+  url     = {https://doi.org/10.1007/s00607-026-01694-1},
+  issn    = {1436-5057}  
 }</div>
         </div>
 
