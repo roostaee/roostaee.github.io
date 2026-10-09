@@ -104,11 +104,13 @@
       z-index: 1000;
     }
 
-    nav {
+nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 0;
+      flex-wrap: wrap; /* Allows brand and menu to breathe */
+      gap: 0.5rem 1rem;
     }
 
     .nav-brand {
@@ -120,8 +122,9 @@
 
     .nav-links {
       display: flex;
-      gap: 1.4rem;
+      gap: 1.2rem;
       list-style: none;
+      flex-wrap: wrap; /* Splits cleanly if screen is resized */
     }
 
     .nav-links a {
@@ -597,43 +600,42 @@
       color: var(--text-muted);
     }
 
-    /* ========================================================= */
+   /* ========================================================= */
     /* COMPREHENSIVE MOBILE OPTIMIZATIONS (Screen width <= 768px) */
     /* ========================================================= */
     @media (max-width: 768px) {
       .container {
-        padding: 0 1rem; /* Reclaim horizontal margin space on phones */
+        padding: 0 1rem;
       }
 
-      /* Native swipeable navigation ribbon */
+      /* Split menu into two neat rows */
       nav {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.6rem;
-        padding: 0.8rem 0;
+        padding: 0.75rem 0;
+      }
+
+      .nav-brand {
+        font-size: 1.15rem;
       }
 
       .nav-links {
         display: flex;
         width: 100%;
-        overflow-x: auto;
-        white-space: nowrap;
-        gap: 0.9rem;
-        padding: 0.4rem 0;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; /* Hide scrollbar Firefox */
-      }
-
-      .nav-links::-webkit-scrollbar {
-        display: none; /* Hide scrollbar Chrome/Safari */
+        flex-wrap: wrap; /* <-- THIS SPLITS IT INTO TWO LINES */
+        gap: 0.4rem 0.45rem;
+        padding: 0;
       }
 
       .nav-links a {
-        font-size: 0.88rem;
+        font-size: 0.8rem;
         background: #f1f5f9;
-        padding: 0.35rem 0.75rem;
-        border-radius: 20px;
+        padding: 0.3rem 0.6rem;
+        border-radius: 6px;
         display: inline-block;
+        border: 1px solid var(--border-color);
+        white-space: nowrap;
       }
 
       /* Hero Mobile Layout */
